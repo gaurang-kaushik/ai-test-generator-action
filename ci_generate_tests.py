@@ -23,7 +23,23 @@ def run(cmd: List[str], cwd: Path = REPO_ROOT, check: bool = True) -> Tuple[int,
 
 
 def get_changed_java_files(base_sha: str, head_sha: str) -> List[Path]:
-    _code, out = run(["git", "diff", "--name-only", f"{base_sha}..{head_sha}"])
+    # Try different git diff approaches to handle various scenarios
+    try:
+        # First try the standard range approach
+        _code, out = run(["git", "diff", "--name-only", f"{base_sha}..{head_sha}"])
+    except RuntimeError:
+        try:
+            # If range fails, try comparing with HEAD~1
+            _code, out = run(["git", "diff", "--name-only", "HEAD~1", "HEAD"])
+        except RuntimeError:
+            try:
+                # If that fails, try comparing with the previous commit
+                _code, out = run(["git", "diff", "--name-only", "HEAD~1"])
+            except RuntimeError:
+                # Last resort: get all Java files in the source directory
+                print("Warning: Could not determine changed files, processing all Java files")
+                return list(APP_SRC.rglob("*.java"))
+    
     files = [line.strip() for line in out.splitlines() if line.strip()]
     java_files = []
     for f in files:
