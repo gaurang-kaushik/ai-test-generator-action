@@ -27,7 +27,9 @@ def run(cmd: List[str], cwd: Path = REPO_ROOT, check: bool = True) -> Tuple[int,
 def run_maven_tests() -> Tuple[bool, str, List[str]]:
     """Run Maven tests and return (success, full_output, error_messages)"""
     print("🧪 Running Maven tests...")
-    code, output = run(["mvn", "test"], check=False)
+    # Run Maven from the JtProject directory
+    jtproject_dir = REPO_ROOT / "JtProject"
+    code, output = run(["mvn", "test"], cwd=jtproject_dir, check=False)
     
     # Extract error messages from the output
     error_messages = []
