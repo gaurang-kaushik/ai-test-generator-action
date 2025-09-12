@@ -73,7 +73,16 @@ runs:
       shell: bash
       run: |
         echo "🚀 Starting AI Test Generator..."
-        python3 ci_generate_tests.py
+        echo "📋 Environment variables:"
+        echo "  - SOURCE_PATH: $SOURCE_PATH"
+        echo "  - TEST_PATH: $TEST_PATH"
+        echo "  - BASE_SHA: $BASE_SHA"
+        echo "  - HEAD_SHA: $HEAD_SHA"
+        echo "  - MODEL: $MODEL"
+        echo "  - GOOGLE_API_KEY: ${GOOGLE_API_KEY:0:10}..."
+        echo ""
+        echo "🔍 Checking for changed files..."
+        timeout 300 python3 ci_generate_tests.py || echo "⚠️ Test generation timed out or failed"
         echo "✅ Initial test generation completed"
 
     - name: Run Maven tests and measure coverage

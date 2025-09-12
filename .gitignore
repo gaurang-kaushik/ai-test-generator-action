@@ -60,3 +60,4 @@ coverage/
 # JaCoCo
 jacoco.exec
 **/target/site/jacoco/
+

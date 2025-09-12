@@ -61,8 +61,12 @@ def ensure_parent_dir(path: Path) -> None:
 
 
 def main() -> int:
+    print("🔍 Starting ci_generate_tests.py...")
+    
     base_sha = os.environ.get("BASE_SHA") or os.environ.get("GITHUB_BASE_SHA") or os.environ.get("GITHUB_EVENT_BEFORE", "")
     head_sha = os.environ.get("HEAD_SHA") or os.environ.get("GITHUB_SHA", "")
+    print(f"📋 Git SHAs - BASE: {base_sha}, HEAD: {head_sha}")
+    
     if not base_sha or not head_sha:
         sys.stderr.write("BASE_SHA or HEAD_SHA not set. Provide env vars or run inside GitHub Actions.\n")
         return 2
@@ -74,7 +78,10 @@ def main() -> int:
         sys.stderr.write(f"Missing PROMPT_GUIDE.md at {GUIDE_PATH}\n")
         return 2
 
+    print("🔍 Getting changed Java files...")
     changed = get_changed_java_files(base_sha, head_sha)
+    print(f"📁 Found {len(changed)} changed Java files")
+    
     if not changed:
         print("No Java changes under app/src/main/java. Skipping generation.")
         return 0
