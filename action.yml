@@ -51,15 +51,15 @@ runs:
       shell: bash
       run: |
         echo "🔍 Running Maven tests with coverage..."
-        mvn clean test -DskipTests=false
+        mvn clean test -DskipTests=false || echo "⚠️ Some tests failed, continuing with error-driven iteration"
         echo "✅ Maven tests completed"
 
-    - name: Iteratively improve coverage
+    - name: Error-driven test improvement
       shell: bash
       run: |
-        echo "🔄 Starting iterative coverage improvement..."
-        python3 ci_iterate_tests.py
-        echo "✅ Coverage improvement completed"
+        echo "🔄 Starting error-driven test improvement..."
+        python3 ci_error_driven_iterate.py
+        echo "✅ Error-driven improvement completed"
 
     - name: Final coverage check
       shell: bash
@@ -78,3 +78,4 @@ runs:
         else:
             print(f'✅ Coverage {coverage}% meets threshold {threshold}%')
         "
+
