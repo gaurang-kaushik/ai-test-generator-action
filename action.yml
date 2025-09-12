@@ -72,6 +72,7 @@ runs:
       shell: bash
       run: |
         echo "🔍 Running Maven tests with coverage..."
+        cd JtProject
         mvn clean test -DskipTests=false || echo "⚠️ Some tests failed, continuing with error-driven iteration"
         echo "✅ Maven tests completed"
 
@@ -86,6 +87,9 @@ runs:
       shell: bash
       run: |
         echo "📊 Final coverage report..."
+        cd JtProject
+        mvn jacoco:report
+        cd ..
         python3 -c "
         import sys
         sys.path.append('.')
