@@ -1,0 +1,80 @@
+name: 'AI Test Generator'
+description: 'Automatically generates JUnit5 + Mockito test classes using AI and enforces code coverage thresholds'
+author: 'AI Test Generator'
+
+inputs:
+  api-key:
+    description: 'Google API key for Gemini AI'
+    required: true
+  coverage-threshold:
+    description: 'Minimum code coverage threshold (percentage)'
+    required: false
+    default: '80'
+  source-path:
+    description: 'Path to Java source files relative to repository root'
+    required: false
+    default: 'src/main/java'
+  test-path:
+    description: 'Path for generated test files relative to repository root'
+    required: false
+    default: 'src/test/java'
+  model:
+    description: 'AI model to use for test generation'
+    required: false
+    default: 'gemini-1.5-pro'
+  auto-commit:
+    description: 'Whether to automatically commit generated tests'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set environment variables
+      shell: bash
+      run: |
+        echo "GOOGLE_API_KEY=${{ inputs.api-key }}" >> $GITHUB_ENV
+        echo "SOURCE_PATH=${{ inputs.source-path }}" >> $GITHUB_ENV
+        echo "TEST_PATH=${{ inputs.test-path }}" >> $GITHUB_ENV
+        echo "COVERAGE_THRESHOLD=${{ inputs.coverage-threshold }}" >> $GITHUB_ENV
+        echo "MODEL=${{ inputs.model }}" >> $GITHUB_ENV
+        echo "AUTO_COMMIT=${{ inputs.auto-commit }}" >> $GITHUB_ENV
+
+    - name: Generate initial tests
+      shell: bash
+      run: |
+        echo "🚀 Starting AI Test Generator..."
+        python3 ci_generate_tests.py
+        echo "✅ Initial test generation completed"
+
+    - name: Run Maven tests and measure coverage
+      shell: bash
+      run: |
+        echo "🔍 Running Maven tests with coverage..."
+        mvn clean test -DskipTests=false
+        echo "✅ Maven tests completed"
+
+    - name: Iteratively improve coverage
+      shell: bash
+      run: |
+        echo "🔄 Starting iterative coverage improvement..."
+        python3 ci_iterate_tests.py
+        echo "✅ Coverage improvement completed"
+
+    - name: Final coverage check
+      shell: bash
+      run: |
+        echo "📊 Final coverage report..."
+        python3 -c "
+        import sys
+        sys.path.append('.')
+        from ci_iterate_tests import read_line_coverage
+        coverage = read_line_coverage()
+        threshold = float('${{ inputs.coverage-threshold }}')
+        print(f'Final coverage: {coverage}% (threshold: {threshold}%)')
+        if coverage < threshold:
+            print(f'❌ Coverage {coverage}% is below threshold {threshold}%')
+            exit(1)
+        else:
+            print(f'✅ Coverage {coverage}% meets threshold {threshold}%')
+        "
