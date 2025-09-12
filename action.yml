@@ -59,7 +59,15 @@ runs:
         curl -o ci_iterate_tests.py https://raw.githubusercontent.com/gaurang-kaushik/ai-test-generator-action/main/ci_iterate_tests.py
         curl -o ci_error_driven_iterate.py https://raw.githubusercontent.com/gaurang-kaushik/ai-test-generator-action/main/ci_error_driven_iterate.py
         curl -o PROMPT_GUIDE.md https://raw.githubusercontent.com/gaurang-kaushik/ai-test-generator-action/main/PROMPT_GUIDE.md
+        curl -o requirements.txt https://raw.githubusercontent.com/gaurang-kaushik/ai-test-generator-action/main/requirements.txt
         echo "✅ Scripts downloaded"
+
+    - name: Install Python dependencies
+      shell: bash
+      run: |
+        echo "📦 Installing Python dependencies..."
+        pip install -r requirements.txt
+        echo "✅ Dependencies installed"
 
     - name: Generate initial tests
       shell: bash
