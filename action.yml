@@ -39,6 +39,16 @@ runs:
         echo "COVERAGE_THRESHOLD=${{ inputs.coverage-threshold }}" >> $GITHUB_ENV
         echo "MODEL=${{ inputs.model }}" >> $GITHUB_ENV
         echo "AUTO_COMMIT=${{ inputs.auto-commit }}" >> $GITHUB_ENV
+        
+        # Set git diff variables for detecting changed files
+        if [ "${{ github.event_name }}" = "pull_request" ]; then
+          echo "BASE_SHA=${{ github.event.pull_request.base.sha }}" >> $GITHUB_ENV
+          echo "HEAD_SHA=${{ github.event.pull_request.head.sha }}" >> $GITHUB_ENV
+        else
+          # For push events, compare with previous commit
+          echo "BASE_SHA=${{ github.event.before }}" >> $GITHUB_ENV
+          echo "HEAD_SHA=${{ github.sha }}" >> $GITHUB_ENV
+        fi
 
     - name: Download AI Test Generator scripts
       shell: bash
