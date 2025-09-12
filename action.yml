@@ -40,6 +40,17 @@ runs:
         echo "MODEL=${{ inputs.model }}" >> $GITHUB_ENV
         echo "AUTO_COMMIT=${{ inputs.auto-commit }}" >> $GITHUB_ENV
 
+    - name: Download AI Test Generator scripts
+      shell: bash
+      run: |
+        echo "📥 Downloading AI Test Generator scripts..."
+        curl -o generate_tests.py https://raw.githubusercontent.com/gaurang-kaushik/ai-test-generator-action/main/generate_tests.py
+        curl -o ci_generate_tests.py https://raw.githubusercontent.com/gaurang-kaushik/ai-test-generator-action/main/ci_generate_tests.py
+        curl -o ci_iterate_tests.py https://raw.githubusercontent.com/gaurang-kaushik/ai-test-generator-action/main/ci_iterate_tests.py
+        curl -o ci_error_driven_iterate.py https://raw.githubusercontent.com/gaurang-kaushik/ai-test-generator-action/main/ci_error_driven_iterate.py
+        curl -o PROMPT_GUIDE.md https://raw.githubusercontent.com/gaurang-kaushik/ai-test-generator-action/main/PROMPT_GUIDE.md
+        echo "✅ Scripts downloaded"
+
     - name: Generate initial tests
       shell: bash
       run: |
