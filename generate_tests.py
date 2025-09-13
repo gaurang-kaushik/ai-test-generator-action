@@ -4,6 +4,7 @@ import argparse
 import os
 import re
 import sys
+from pathlib import Path
 from typing import Optional
 
 try:
@@ -63,13 +64,19 @@ def extract_system_prompt(guide_text: str) -> str:
     return system_prompt
 
 
-def build_user_prompt(java_code: str) -> str:
+def build_user_prompt(java_code: str, context_file: str = None) -> str:
     # Mirrors the User Prompt Template in PROMPT_GUIDE.md
+    context_section = ""
+    if context_file and os.path.exists(context_file):
+        with open(context_file, 'r', encoding='utf-8') as f:
+            context_section = f"\n\nENHANCED CONTEXT:\n{f.read()}\n"
+    
     return (
         "Generate a JUnit5 + Mockito test class for the following Java code. "
         "Follow the system instructions provided.\n\n"
         "Java code:\n"
-        f"{java_code}\n\n"
+        f"{java_code}\n"
+        f"{context_section}"
         "END.\n\n"
         "Important final reminders for the generator:\n"
         "- Do NOT change business logic. If you think business logic is wrong, add a one-line `// NOTE:` at the top explaining the concern, then still generate tests assuming current behavior.\n"
@@ -85,6 +92,7 @@ def build_user_prompt(java_code: str) -> str:
         "  - Any assumptions made\n"
         "- Ensure the produced Java file compiles (imports, package, class name, annotations).\n"
         "- Output ONLY the Java test file content with no Markdown fences or backticks.\n"
+        "- Use the ENHANCED CONTEXT above to understand the exact class structure, constructors, and dependencies.\n"
     )
 
 
@@ -229,7 +237,20 @@ def main(argv: list[str]) -> int:
         sys.stderr.write(f"Error reading Java input: {e}\n")
         return 2
 
-    user_prompt = build_user_prompt(java_code)
+    # Generate enhanced context if java file is provided
+    context_file = None
+    if args.java and os.path.exists(args.java):
+        try:
+            from enhanced_context_generator import JavaContextAnalyzer
+            analyzer = JavaContextAnalyzer("JtProject/src/main/java")
+            context_file = args.java.replace('.java', '_context.txt')
+            context = analyzer.generate_comprehensive_context(Path(args.java))
+            with open(context_file, 'w', encoding='utf-8') as f:
+                f.write(context)
+        except Exception as e:
+            print(f"Warning: Could not generate enhanced context: {e}")
+
+    user_prompt = build_user_prompt(java_code, context_file)
 
     try:
         model = configure_gemini(args.api_key, args.model, system_prompt)

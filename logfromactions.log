@@ -1,0 +1,552 @@
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartProductDaoTest.java:[64,51] no suitable method found for thenReturn(com.jtspringproject.JtSpringProject.models.CartProduct)
+    method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable) is not applicable
+      (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProduct cannot be converted to java.io.Serializable)
+    method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
+      (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProduct cannot be converted to java.io.Serializable)
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[70,24] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+  required: no arguments
+  found: int,java.lang.String
+  reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[71,24] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+  required: no arguments
+  found: int,java.lang.String
+  reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[113,29] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+  required: no arguments
+  found: int,java.lang.String
+  reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[134,29] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+  required: no arguments
+  found: int,java.lang.String
+  reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/productDaoTest.java:[72,36] no suitable method found for thenReturn(com.jtspringproject.JtSpringProject.models.Product)
+    method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable) is not applicable
+      (argument mismatch; com.jtspringproject.JtSpringProject.models.Product cannot be converted to java.io.Serializable)
+    method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
+      (argument mismatch; com.jtspringproject.JtSpringProject.models.Product cannot be converted to java.io.Serializable)
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[78,34] 'void' type not allowed here
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[104,49] cannot find symbol
+  symbol:   class NoResultException
+  location: class com.jtspringproject.JtSpringProject.dao.userDaoTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[164,57] cannot find symbol
+  symbol:   class NoResultException
+  location: class com.jtspringproject.JtSpringProject.dao.userDaoTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[41,31] DRIVER has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[42,31] PASSWORD has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[43,31] URL has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[44,31] USERNAME has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[45,31] DIALECT has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[46,31] SHOW_SQL has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[47,31] HBM2DDL_AUTO has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[48,31] PACKAGES_TO_SCAN has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[54,77] cannot find symbol
+  symbol:   method getDriverClassName()
+  location: class org.springframework.jdbc.datasource.DriverManagerDataSource
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[55,54] cannot find symbol
+  symbol:   method getUrl()
+  location: variable dataSource of type javax.sql.DataSource
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[64,52] cannot find symbol
+  symbol:   method getDataSource()
+  location: variable sessionFactoryBean of type org.springframework.orm.hibernate5.LocalSessionFactoryBean
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[65,62] cannot find symbol
+  symbol:   method getPackagesToScan()
+  location: variable sessionFactoryBean of type org.springframework.orm.hibernate5.LocalSessionFactoryBean
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/categoryDaoTest.java:[54,34] 'void' type not allowed here
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/repository/CartProductRepositoryTest.java:[47,57] incompatible types: long cannot be converted to java.lang.Integer
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/repository/CartProductRepositoryTest.java:[60,57] incompatible types: long cannot be converted to java.lang.Integer
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/repository/CartProductRepositoryTest.java:[107,57] incompatible types: long cannot be converted to java.lang.Integer
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartDaoTest.java:[54,33] no suitable method found for thenReturn(com.jtspringproject.JtSpringProject.models.Cart)
+    method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable) is not applicable
+      (argument mismatch; com.jtspringproject.JtSpringProject.models.Cart cannot be converted to java.io.Serializable)
+    method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
+      (argument mismatch; com.jtspringproject.JtSpringProject.models.Cart cannot be converted to java.io.Serializable)
+[INFO] 26 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.443 s
+[INFO] Finished at: 2025-09-12T12:55:39Z
+[INFO] ------------------------------------------------------------------------
+Error:  Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartProductDaoTest.java:[64,51] no suitable method found for thenReturn(com.jtspringproject.JtSpringProject.models.CartProduct)
+Error:      method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable) is not applicable
+Error:        (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProduct cannot be converted to java.io.Serializable)
+Error:      method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
+Error:        (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProduct cannot be converted to java.io.Serializable)
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[70,24] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+Error:    required: no arguments
+Error:    found: int,java.lang.String
+Error:    reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[71,24] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+Error:    required: no arguments
+Error:    found: int,java.lang.String
+Error:    reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[113,29] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+Error:    required: no arguments
+Error:    found: int,java.lang.String
+Error:    reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[134,29] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+Error:    required: no arguments
+Error:    found: int,java.lang.String
+Error:    reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/productDaoTest.java:[72,36] no suitable method found for thenReturn(com.jtspringproject.JtSpringProject.models.Product)
+Error:      method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable) is not applicable
+Error:        (argument mismatch; com.jtspringproject.JtSpringProject.models.Product cannot be converted to java.io.Serializable)
+Error:      method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
+Error:        (argument mismatch; com.jtspringproject.JtSpringProject.models.Product cannot be converted to java.io.Serializable)
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[78,34] 'void' type not allowed here
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[104,49] cannot find symbol
+Error:    symbol:   class NoResultException
+Error:    location: class com.jtspringproject.JtSpringProject.dao.userDaoTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[164,57] cannot find symbol
+Error:    symbol:   class NoResultException
+Error:    location: class com.jtspringproject.JtSpringProject.dao.userDaoTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[41,31] DRIVER has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[42,31] PASSWORD has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[43,31] URL has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[44,31] USERNAME has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[45,31] DIALECT has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[46,31] SHOW_SQL has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[47,31] HBM2DDL_AUTO has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[48,31] PACKAGES_TO_SCAN has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[54,77] cannot find symbol
+Error:    symbol:   method getDriverClassName()
+Error:    location: class org.springframework.jdbc.datasource.DriverManagerDataSource
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[55,54] cannot find symbol
+Error:    symbol:   method getUrl()
+Error:    location: variable dataSource of type javax.sql.DataSource
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[64,52] cannot find symbol
+Error:    symbol:   method getDataSource()
+Error:    location: variable sessionFactoryBean of type org.springframework.orm.hibernate5.LocalSessionFactoryBean
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[65,62] cannot find symbol
+Error:    symbol:   method getPackagesToScan()
+Error:    location: variable sessionFactoryBean of type org.springframework.orm.hibernate5.LocalSessionFactoryBean
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/categoryDaoTest.java:[54,34] 'void' type not allowed here
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/repository/CartProductRepositoryTest.java:[47,57] incompatible types: long cannot be converted to java.lang.Integer
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/repository/CartProductRepositoryTest.java:[60,57] incompatible types: long cannot be converted to java.lang.Integer
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/repository/CartProductRepositoryTest.java:[107,57] incompatible types: long cannot be converted to java.lang.Integer
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartDaoTest.java:[54,33] no suitable method found for thenReturn(com.jtspringproject.JtSpringProject.models.Cart)
+Error:      method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable) is not applicable
+Error:        (argument mismatch; com.jtspringproject.JtSpringProject.models.Cart cannot be converted to java.io.Serializable)
+Error:      method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
+Error:        (argument mismatch; com.jtspringproject.JtSpringProject.models.Cart cannot be converted to java.io.Serializable)
+Error:  -> [Help 1]
+Error:  
+Error:  To see the full stack trace of the errors, re-run Maven with the -e switch.
+Error:  Re-run Maven using the -X switch to enable full debug logging.
+Error:  
+Error:  For more information about the errors and possible solutions, please read the following articles:
+Error:  [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+⚠️ Some tests failed, continuing with error-driven iteration
+✅ Maven tests completed
+Run echo "🔄 Starting error-driven test improvement..."
+🔄 Starting error-driven test improvement...
+🔄 Starting error-driven test improvement...
+Found 22 Java source files
+
+🔄 Iteration 1/5
+🧪 Running Maven tests...
+❌ Tests failing with 99 error(s)
+🔍 Error details:
+  Error 1: [INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[INFO] --...
+Error:  2: [ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/te...
+  Error 3:     method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
+      (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProd...
+📝 Processing JtSpringProjectApplication.java -> JtSpringProjectApplicationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java based on errors...
+✅ Generated improved test for JtSpringProjectApplication.java
+📝 Processing HibernateConfiguration.java -> HibernateConfigurationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/HibernateConfiguration.java based on errors...
+✅ Generated improved test for HibernateConfiguration.java
+📝 Processing categoryService.java -> categoryServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java based on errors...
+✅ Generated improved test for categoryService.java
+📝 Processing userService.java -> userServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java based on errors...
+✅ Generated improved test for userService.java
+📝 Processing productService.java -> productServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java based on errors...
+❌ Failed to generate test for productService.java
+📝 Processing cartService.java -> cartServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/cartService.java based on errors...
+❌ Failed to generate test for cartService.java
+📝 Processing SecurityConfiguration.java -> SecurityConfigurationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.java based on errors...
+❌ Failed to generate test for SecurityConfiguration.java
+📝 Processing CartProductRepository.java -> CartProductRepositoryTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/repository/CartProductRepository.java based on errors...
+❌ Failed to generate test for CartProductRepository.java
+📝 Processing categoryDao.java -> categoryDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/categoryDao.java based on errors...
+❌ Failed to generate test for categoryDao.java
+📝 Processing productDao.java -> productDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/productDao.java based on errors...
+❌ Failed to generate test for productDao.java
+📝 Processing cartProductDao.java -> cartProductDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartProductDao.java based on errors...
+❌ Failed to generate test for cartProductDao.java
+📝 Processing cartDao.java -> cartDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartDao.java based on errors...
+❌ Failed to generate test for cartDao.java
+📝 Processing userDao.java -> userDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java based on errors...
+❌ Failed to generate test for userDao.java
+📝 Processing AdminController.java -> AdminControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java based on errors...
+❌ Failed to generate test for AdminController.java
+📝 Processing ErrorController.java -> ErrorControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/ErrorController.java based on errors...
+✅ Generated improved test for ErrorController.java
+📝 Processing UserController.java -> UserControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java based on errors...
+✅ Generated improved test for UserController.java
+📝 Processing CartProductId.java -> CartProductIdTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProductId.java based on errors...
+✅ Generated improved test for CartProductId.java
+📝 Processing User.java -> UserTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/User.java based on errors...
+❌ Failed to generate test for User.java
+📝 Processing Cart.java -> CartTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Cart.java based on errors...
+❌ Failed to generate test for Cart.java
+📝 Processing Category.java -> CategoryTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java based on errors...
+❌ Failed to generate test for Category.java
+📝 Processing CartProduct.java -> CartProductTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProduct.java based on errors...
+❌ Failed to generate test for CartProduct.java
+📝 Processing Product.java -> ProductTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Product.java based on errors...
+❌ Failed to generate test for Product.java
+
+🔄 Iteration 2/5
+🧪 Running Maven tests...
+❌ Tests failing with 67 error(s)
+🔍 Error details:
+  Error 1: [INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[INFO] --...
+Error:  2: [ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/te...
+  Error 3:     method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
+      (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProd...
+📝 Processing JtSpringProjectApplication.java -> JtSpringProjectApplicationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java based on errors...
+❌ Failed to generate test for JtSpringProjectApplication.java
+📝 Processing HibernateConfiguration.java -> HibernateConfigurationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/HibernateConfiguration.java based on errors...
+❌ Failed to generate test for HibernateConfiguration.java
+📝 Processing categoryService.java -> categoryServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java based on errors...
+❌ Failed to generate test for categoryService.java
+📝 Processing userService.java -> userServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java based on errors...
+❌ Failed to generate test for userService.java
+📝 Processing productService.java -> productServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java based on errors...
+❌ Failed to generate test for productService.java
+📝 Processing cartService.java -> cartServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/cartService.java based on errors...
+❌ Failed to generate test for cartService.java
+📝 Processing SecurityConfiguration.java -> SecurityConfigurationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.java based on errors...
+✅ Generated improved test for SecurityConfiguration.java
+📝 Processing CartProductRepository.java -> CartProductRepositoryTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/repository/CartProductRepository.java based on errors...
+✅ Generated improved test for CartProductRepository.java
+📝 Processing categoryDao.java -> categoryDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/categoryDao.java based on errors...
+✅ Generated improved test for categoryDao.java
+📝 Processing productDao.java -> productDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/productDao.java based on errors...
+❌ Failed to generate test for productDao.java
+📝 Processing cartProductDao.java -> cartProductDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartProductDao.java based on errors...
+❌ Failed to generate test for cartProductDao.java
+📝 Processing cartDao.java -> cartDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartDao.java based on errors...
+✅ Generated improved test for cartDao.java
+📝 Processing userDao.java -> userDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java based on errors...
+❌ Failed to generate test for userDao.java
+📝 Processing AdminController.java -> AdminControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java based on errors...
+❌ Failed to generate test for AdminController.java
+📝 Processing ErrorController.java -> ErrorControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/ErrorController.java based on errors...
+❌ Failed to generate test for ErrorController.java
+📝 Processing UserController.java -> UserControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java based on errors...
+❌ Failed to generate test for UserController.java
+📝 Processing CartProductId.java -> CartProductIdTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProductId.java based on errors...
+❌ Failed to generate test for CartProductId.java
+📝 Processing User.java -> UserTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/User.java based on errors...
+❌ Failed to generate test for User.java
+📝 Processing Cart.java -> CartTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Cart.java based on errors...
+❌ Failed to generate test for Cart.java
+📝 Processing Category.java -> CategoryTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java based on errors...
+❌ Failed to generate test for Category.java
+📝 Processing CartProduct.java -> CartProductTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProduct.java based on errors...
+✅ Generated improved test for CartProduct.java
+📝 Processing Product.java -> ProductTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Product.java based on errors...
+✅ Generated improved test for Product.java
+
+🔄 Iteration 3/5
+🧪 Running Maven tests...
+❌ Tests failing with 59 error(s)
+🔍 Error details:
+  Error 1: [INFO] Compiling 21 source files to /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/test-classes
+[INFO] -------------------------------------------------...
+Error:  2: [ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/te...
+  Error 3:     method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
+      (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProd...
+📝 Processing JtSpringProjectApplication.java -> JtSpringProjectApplicationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java based on errors...
+✅ Generated improved test for JtSpringProjectApplication.java
+📝 Processing HibernateConfiguration.java -> HibernateConfigurationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/HibernateConfiguration.java based on errors...
+❌ Failed to generate test for HibernateConfiguration.java
+📝 Processing categoryService.java -> categoryServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java based on errors...
+✅ Generated improved test for categoryService.java
+📝 Processing userService.java -> userServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java based on errors...
+❌ Failed to generate test for userService.java
+📝 Processing productService.java -> productServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java based on errors...
+❌ Failed to generate test for productService.java
+📝 Processing cartService.java -> cartServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/cartService.java based on errors...
+❌ Failed to generate test for cartService.java
+📝 Processing SecurityConfiguration.java -> SecurityConfigurationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.java based on errors...
+❌ Failed to generate test for SecurityConfiguration.java
+📝 Processing CartProductRepository.java -> CartProductRepositoryTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/repository/CartProductRepository.java based on errors...
+❌ Failed to generate test for CartProductRepository.java
+📝 Processing categoryDao.java -> categoryDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/categoryDao.java based on errors...
+❌ Failed to generate test for categoryDao.java
+📝 Processing productDao.java -> productDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/productDao.java based on errors...
+❌ Failed to generate test for productDao.java
+📝 Processing cartProductDao.java -> cartProductDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartProductDao.java based on errors...
+❌ Failed to generate test for cartProductDao.java
+📝 Processing cartDao.java -> cartDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartDao.java based on errors...
+❌ Failed to generate test for cartDao.java
+📝 Processing userDao.java -> userDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java based on errors...
+✅ Generated improved test for userDao.java
+📝 Processing AdminController.java -> AdminControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java based on errors...
+✅ Generated improved test for AdminController.java
+📝 Processing ErrorController.java -> ErrorControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/ErrorController.java based on errors...
+✅ Generated improved test for ErrorController.java
+📝 Processing UserController.java -> UserControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java based on errors...
+❌ Failed to generate test for UserController.java
+📝 Processing CartProductId.java -> CartProductIdTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProductId.java based on errors...
+❌ Failed to generate test for CartProductId.java
+📝 Processing User.java -> UserTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/User.java based on errors...
+❌ Failed to generate test for User.java
+📝 Processing Cart.java -> CartTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Cart.java based on errors...
+❌ Failed to generate test for Cart.java
+📝 Processing Category.java -> CategoryTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java based on errors...
+❌ Failed to generate test for Category.java
+📝 Processing CartProduct.java -> CartProductTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProduct.java based on errors...
+❌ Failed to generate test for CartProduct.java
+📝 Processing Product.java -> ProductTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Product.java based on errors...
+❌ Failed to generate test for Product.java
+
+🔄 Iteration 4/5
+🧪 Running Maven tests...
+❌ Tests failing with 59 error(s)
+🔍 Error details:
+  Error 1: [INFO] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java: Recompile with -Xlint:unchecked f...
+Error:  2: [ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/te...
+  Error 3: [INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/J...
+📝 Processing JtSpringProjectApplication.java -> JtSpringProjectApplicationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java based on errors...
+❌ Failed to generate test for JtSpringProjectApplication.java
+📝 Processing HibernateConfiguration.java -> HibernateConfigurationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/HibernateConfiguration.java based on errors...
+❌ Failed to generate test for HibernateConfiguration.java
+📝 Processing categoryService.java -> categoryServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java based on errors...
+✅ Generated improved test for categoryService.java
+📝 Processing userService.java -> userServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java based on errors...
+✅ Generated improved test for userService.java
+📝 Processing productService.java -> productServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java based on errors...
+✅ Generated improved test for productService.java
+📝 Processing cartService.java -> cartServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/cartService.java based on errors...
+❌ Failed to generate test for cartService.java
+📝 Processing SecurityConfiguration.java -> SecurityConfigurationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.java based on errors...
+❌ Failed to generate test for SecurityConfiguration.java
+📝 Processing CartProductRepository.java -> CartProductRepositoryTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/repository/CartProductRepository.java based on errors...
+❌ Failed to generate test for CartProductRepository.java
+📝 Processing categoryDao.java -> categoryDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/categoryDao.java based on errors...
+❌ Failed to generate test for categoryDao.java
+📝 Processing productDao.java -> productDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/productDao.java based on errors...
+❌ Failed to generate test for productDao.java
+📝 Processing cartProductDao.java -> cartProductDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartProductDao.java based on errors...
+❌ Failed to generate test for cartProductDao.java
+📝 Processing cartDao.java -> cartDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartDao.java based on errors...
+❌ Failed to generate test for cartDao.java
+📝 Processing userDao.java -> userDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java based on errors...
+❌ Failed to generate test for userDao.java
+📝 Processing AdminController.java -> AdminControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java based on errors...
+❌ Failed to generate test for AdminController.java
+📝 Processing ErrorController.java -> ErrorControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/ErrorController.java based on errors...
+❌ Failed to generate test for ErrorController.java
+📝 Processing UserController.java -> UserControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java based on errors...
+❌ Failed to generate test for UserController.java
+📝 Processing CartProductId.java -> CartProductIdTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProductId.java based on errors...
+❌ Failed to generate test for CartProductId.java
+📝 Processing User.java -> UserTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/User.java based on errors...
+✅ Generated improved test for User.java
+📝 Processing Cart.java -> CartTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Cart.java based on errors...
+✅ Generated improved test for Cart.java
+📝 Processing Category.java -> CategoryTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java based on errors...
+✅ Generated improved test for Category.java
+📝 Processing CartProduct.java -> CartProductTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProduct.java based on errors...
+❌ Failed to generate test for CartProduct.java
+📝 Processing Product.java -> ProductTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Product.java based on errors...
+✅ Generated improved test for Product.java
+
+🔄 Iteration 5/5
+🧪 Running Maven tests...
+❌ Tests failing with 63 error(s)
+🔍 Error details:
+  Error 1: [INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[INFO] --...
+Error:  2: [ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/te...
+  Error 3: [INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/J...
+📝 Processing JtSpringProjectApplication.java -> JtSpringProjectApplicationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java based on errors...
+✅ Generated improved test for JtSpringProjectApplication.java
+📝 Processing HibernateConfiguration.java -> HibernateConfigurationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/HibernateConfiguration.java based on errors...
+❌ Failed to generate test for HibernateConfiguration.java
+📝 Processing categoryService.java -> categoryServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java based on errors...
+❌ Failed to generate test for categoryService.java
+📝 Processing userService.java -> userServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java based on errors...
+❌ Failed to generate test for userService.java
+📝 Processing productService.java -> productServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java based on errors...
+❌ Failed to generate test for productService.java
+📝 Processing cartService.java -> cartServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/cartService.java based on errors...
+❌ Failed to generate test for cartService.java
+📝 Processing SecurityConfiguration.java -> SecurityConfigurationTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.java based on errors...
+❌ Failed to generate test for SecurityConfiguration.java
+📝 Processing CartProductRepository.java -> CartProductRepositoryTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/repository/CartProductRepository.java based on errors...
+❌ Failed to generate test for CartProductRepository.java
+📝 Processing categoryDao.java -> categoryDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/categoryDao.java based on errors...
+❌ Failed to generate test for categoryDao.java
+📝 Processing productDao.java -> productDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/productDao.java based on errors...
+❌ Failed to generate test for productDao.java
+📝 Processing cartProductDao.java -> cartProductDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartProductDao.java based on errors...
+✅ Generated improved test for cartProductDao.java
+📝 Processing cartDao.java -> cartDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartDao.java based on errors...
+✅ Generated improved test for cartDao.java
+📝 Processing userDao.java -> userDaoTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java based on errors...
+✅ Generated improved test for userDao.java
+📝 Processing AdminController.java -> AdminControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java based on errors...
+✅ Generated improved test for AdminController.java
+📝 Processing ErrorController.java -> ErrorControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/ErrorController.java based on errors...
+✅ Generated improved test for ErrorController.java
+📝 Processing UserController.java -> UserControllerTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java based on errors...
+✅ Generated improved test for UserController.java
+📝 Processing CartProductId.java -> CartProductIdTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProductId.java based on errors...
+✅ Generated improved test for CartProductId.java
+📝 Processing User.java -> UserTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/User.java based on errors...
+✅ Generated improved test for User.java
+📝 Processing Cart.java -> CartTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Cart.java based on errors...
+✅ Generated improved test for Cart.java
+📝 Processing Category.java -> CategoryTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java based on errors...
+✅ Generated improved test for Category.java
+📝 Processing CartProduct.java -> CartProductTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProduct.java based on errors...
+✅ Generated improved test for CartProduct.java
+📝 Processing Product.java -> ProductTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Product.java based on errors...
+✅ Generated improved test for Product.java
+🧪 Running Maven tests...
+
+📊 Final Results:
+  Tests passing: ❌
+  Coverage: 0.0% (target: 80.0%)
+❌ Some tests still failing after error-driven iteration
+Error: Process completed with exit code 1.
