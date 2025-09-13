@@ -93,6 +93,8 @@ MOST IMPORTANT FIXES NEEDED:
 3. TYPE SAFETY: Use EXACT types (int, not long; String, not Object)
 4. IMPORTS: Include ALL necessary imports
 5. MOCKITO: Use proper mocking patterns for Spring Boot
+6. DATABASE MOCKING: For Spring Boot Application tests, use @MockBean to mock database connections
+7. NO REAL DATABASE: Never let tests connect to real databases - always mock database dependencies
 
 Original Java code:
 {java_code}
@@ -100,7 +102,7 @@ Original Java code:
 Previous failing test (if any):
 {failing_test_code}
 
-Generate a corrected test that will compile without ANY errors. Focus on fixing the constructor and method name issues first.
+Generate a corrected test that will compile without ANY errors. Focus on fixing the constructor and method name issues first, and ensure database connections are properly mocked.
 """
     
     # Write enhanced prompt to a temporary file
