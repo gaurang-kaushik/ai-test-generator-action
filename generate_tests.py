@@ -229,8 +229,8 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     )
     parser.add_argument(
         "--model",
-        default="gemini-1.5-pro",
-        help="Gemini model to use (default: gemini-1.5-pro)",
+        default="gemini-2.0-flash-preview",
+        help="Gemini model to use (default: gemini-2.0-flash-preview)",
     )
     parser.add_argument(
         "--api-key",
@@ -345,7 +345,7 @@ def generate_test_with_prompt(java_file: Path, test_file: Path, enhanced_prompt:
             raise RuntimeError("google-generativeai not installed. Run: pip install google-generativeai")
         
         genai.configure(api_key=os.environ.get("GOOGLE_API_KEY", ""))
-        model = genai.GenerativeModel("gemini-1.5-pro")
+        model = genai.GenerativeModel("gemini-2.0-flash-preview")
         
         # Generate the test content
         test_content = generate_tests(model, user_prompt)
