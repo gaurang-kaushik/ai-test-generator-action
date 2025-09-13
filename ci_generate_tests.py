@@ -49,6 +49,7 @@ def get_changed_java_files(base_sha: str, head_sha: str) -> List[Path]:
                 print("💡 This prevents the AI from being overwhelmed with too much context")
                 return []
     
+    # If we get here, we have output from git diff
     files = [line.strip() for line in out.splitlines() if line.strip()]
     java_files = []
     for f in files:

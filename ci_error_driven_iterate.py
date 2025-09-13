@@ -188,9 +188,22 @@ def get_all_java_files() -> List[Path]:
             print(f"🎯 Error iteration focusing on {len(java_files)} changed files only")
             return java_files
         except RuntimeError as e:
-            print(f"❌ Git diff failed in error iteration: {e}")
-            print("🚫 CRITICAL: Cannot determine changed files - ABORTING to prevent processing all files")
-            return []
+            print(f"❌ Git diff failed: {base_sha}..{head_sha} - {e}")
+            try:
+                # Try HEAD~1..HEAD as fallback
+                _code, out = run(["git", "diff", "--name-only", "HEAD~1", "HEAD"])
+                files = [line.strip() for line in out.splitlines() if line.strip()]
+                java_files = []
+                for f in files:
+                    p = (REPO_ROOT / f).resolve()
+                    if p.suffix == ".java" and str(p).startswith(str(REPO_ROOT / SOURCE_PATH)):
+                        java_files.append(p)
+                print(f"🎯 Error iteration focusing on {len(java_files)} changed files only (fallback)")
+                return java_files
+            except RuntimeError as e2:
+                print(f"❌ All git diff attempts failed in error iteration: {e2}")
+                print("🚫 CRITICAL: Cannot determine changed files - ABORTING to prevent processing all files")
+                return []
     
     # If no git SHAs available, return empty list instead of processing all files
     print("❌ No git SHAs available - cannot determine changed files")

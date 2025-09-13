@@ -46,9 +46,18 @@ runs:
           echo "HEAD_SHA=${{ github.event.pull_request.head.sha }}" >> $GITHUB_ENV
         else
           # For push events, compare with previous commit
-          echo "BASE_SHA=${{ github.event.before }}" >> $GITHUB_ENV
+          # Use HEAD~1 if github.event.before is null or empty
+          if [ -n "${{ github.event.before }}" ] && [ "${{ github.event.before }}" != "null" ]; then
+            echo "BASE_SHA=${{ github.event.before }}" >> $GITHUB_ENV
+          else
+            echo "BASE_SHA=HEAD~1" >> $GITHUB_ENV
+          fi
           echo "HEAD_SHA=${{ github.sha }}" >> $GITHUB_ENV
         fi
+        
+        # Debug: Print the SHA values
+        echo "🔍 Debug - BASE_SHA: $BASE_SHA"
+        echo "🔍 Debug - HEAD_SHA: $HEAD_SHA"
 
     - name: Download AI Test Generator scripts
       shell: bash
