@@ -308,10 +308,14 @@ def generate_test_with_prompt(java_file: Path, test_file: Path, enhanced_prompt:
             raise RuntimeError("google-generativeai not installed. Run: pip install google-generativeai")
         
         genai.configure(api_key=os.environ.get("GOOGLE_API_KEY", ""))
-        model = genai.GenerativeModel("gemini-2.0-flash-exp")
+        model = genai.GenerativeModel("gemini-1.5-pro")
         
         # Generate the test content
         test_content = generate_tests(model, user_prompt)
+        
+        # Add delay to avoid rate limits
+        import time
+        time.sleep(2)  # Wait 2 seconds between API calls
         
         # Write the test file
         test_file.parent.mkdir(parents=True, exist_ok=True)
