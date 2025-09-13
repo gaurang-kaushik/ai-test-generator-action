@@ -34,13 +34,19 @@ def run_maven_tests() -> Tuple[bool, str, List[str]]:
     # Extract error messages from the output
     error_messages = []
     if code != 0:
-        # Look for specific error patterns
+        # Look for specific compilation error patterns
         lines = output.split('\n')
         for i, line in enumerate(lines):
-            if 'ERROR' in line or 'Exception' in line or 'Failed' in line:
-                # Capture context around the error
-                start = max(0, i-2)
-                end = min(len(lines), i+3)
+            if 'COMPILATION ERROR' in line or 'incompatible types' in line or 'constructor' in line or 'method' in line:
+                # Capture the specific error line and context
+                start = max(0, i-1)
+                end = min(len(lines), i+2)
+                error_context = '\n'.join(lines[start:end])
+                error_messages.append(error_context)
+            elif 'ERROR' in line and ('test' in line.lower() or 'java' in line.lower()):
+                # Capture test-related errors
+                start = max(0, i-1)
+                end = min(len(lines), i+2)
                 error_context = '\n'.join(lines[start:end])
                 error_messages.append(error_context)
     
@@ -80,6 +86,9 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
     
     # Create an enhanced prompt with error feedback
     error_feedback = "\n".join(error_messages) if error_messages else "No specific errors captured"
+    print(f"🔍 Captured {len(error_messages)} error messages:")
+    for i, msg in enumerate(error_messages):
+        print(f"  Error {i+1}: {msg[:100]}...")
     
     enhanced_prompt = f"""
 CRITICAL: The previous test generation failed with these specific errors:
@@ -91,6 +100,8 @@ MOST IMPORTANT FIXES NEEDED:
    - CORRECT: new Category(); category.setId(1); category.setName("name")
 2. METHOD NAMES: Use EXACT camelCase method names from the actual class
 3. TYPE SAFETY: Use EXACT types (int, not long; String, not Object)
+   - WRONG: double value = 1.5; int id = value; (lossy conversion)
+   - CORRECT: int id = 1; or int id = (int) value; (explicit cast)
 4. IMPORTS: Include ALL necessary imports
 5. MOCKITO: Use proper mocking patterns for Spring Boot
 6. DATABASE MOCKING: For Spring Boot Application tests, use @MockBean to mock database connections
