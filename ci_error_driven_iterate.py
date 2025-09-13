@@ -84,11 +84,24 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
         except Exception as e:
             print(f"Error reading {test_file}: {e}")
     
+    # Filter errors to only those relevant to this specific file
+    relevant_errors = []
+    file_name = java_file.name
+    test_file_name = test_file.name
+    
+    for error in error_messages:
+        if file_name in error or test_file_name in error:
+            relevant_errors.append(error)
+    
+    # If no relevant errors found, use all errors as fallback
+    if not relevant_errors:
+        relevant_errors = error_messages
+    
     # Create an enhanced prompt with error feedback
-    error_feedback = "\n".join(error_messages) if error_messages else "No specific errors captured"
-    print(f"🔍 Captured {len(error_messages)} error messages:")
-    for i, msg in enumerate(error_messages):
-        print(f"  Error {i+1}: {msg[:100]}...")
+    error_feedback = "\n".join(relevant_errors) if relevant_errors else "No specific errors captured"
+    print(f"🔍 Captured {len(error_messages)} total errors, {len(relevant_errors)} relevant to {file_name}:")
+    for i, msg in enumerate(relevant_errors):
+        print(f"  Relevant Error {i+1}: {msg[:100]}...")
     
     enhanced_prompt = f"""
 CRITICAL: The previous test generation failed with these specific errors:

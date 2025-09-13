@@ -1,477 +1,52 @@
-                            
-Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar (78 kB at 7.8 MB/s)
-Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar (7.1 kB at 1.4 MB/s)
+
+                   
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.8.4/plexus-compiler-javac-2.8.4.jar (21 kB at 967 kB/s)
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 22 source files to /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/classes
+[INFO] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartProductDao.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartProductDao.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running com.jtspringproject.JtSpringProject.services.categoryServiceTest
-[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.767 s - in com.jtspringproject.JtSpringProject.services.categoryServiceTest
-[INFO] Running com.jtspringproject.JtSpringProject.services.productServiceTest
-[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 s - in com.jtspringproject.JtSpringProject.services.productServiceTest
-[INFO] Running com.jtspringproject.JtSpringProject.services.userServiceTest
-[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.123 s - in com.jtspringproject.JtSpringProject.services.userServiceTest
-[INFO] Running com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v2.6.4)
-2025-09-13 15:01:11.003  INFO 2282 --- [           main] c.j.J.JtSpringProjectApplication         : Starting JtSpringProjectApplication using Java 11.0.28 on runnervmf4ws1 with PID 2282 (started by runner in /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject)
-2025-09-13 15:01:11.028  INFO 2282 --- [           main] c.j.J.JtSpringProjectApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-09-13 15:01:12.192  INFO 2282 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-09-13 15:01:12.273  INFO 2282 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 1 JPA repository interfaces.
-2025-09-13 15:01:13.240  INFO 2282 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-09-13 15:01:13.266  INFO 2282 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-09-13 15:01:13.267  INFO 2282 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2025-09-13 15:01:13.983  INFO 2282 --- [           main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-09-13 15:01:13.991  INFO 2282 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-09-13 15:01:13.992  INFO 2282 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2816 ms
-2025-09-13 15:01:14.296  INFO 2282 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
-2025-09-13 15:01:14.773  INFO 2282 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-09-13 15:01:15.163  WARN 2282 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
-com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:na]
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189) ~[java.sql:na]
-	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:155) ~[spring-jdbc-5.3.16.jar:5.3.16]
-	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:146) ~[spring-jdbc-5.3.16.jar:5.3.16]
-	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205) ~[spring-jdbc-5.3.16.jar:5.3.16]
-	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169) ~[spring-jdbc-5.3.16.jar:5.3.16]
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:86) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:479) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:85) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:709) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:616) ~[spring-orm-5.3.16.jar:5.3.16]
-	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:600) ~[spring-orm-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplication.main(JtSpringProjectApplication.java:11) ~[classes/:na]
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32) ~[test-classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725) ~[junit-platform-commons-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:121) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	... 156 common frames omitted
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	... 159 common frames omitted
-2025-09-13 15:01:15.188  INFO 2282 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2025-09-13 15:01:15.855  WARN 2282 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
-2025-09-13 15:01:15.855 ERROR 2282 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2025-09-13 15:01:15.860  WARN 2282 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration' defined in file [/home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/classes/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException
-2025-09-13 15:01:15.862  INFO 2282 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-09-13 15:01:15.879  INFO 2282 --- [           main] ConditionEvaluationReportLoggingListener : 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2025-09-13 15:01:15.905 ERROR 2282 --- [           main] o.s.boot.SpringApplication               : Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration' defined in file [/home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/classes/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; 
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplication.main(JtSpringProjectApplication.java:11) ~[classes/:na]
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32) ~[test-classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725) ~[junit-platform-commons-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 85 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 100 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 114 common frames omitted
-Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:112) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:71) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:559) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:68) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:616) ~[spring-orm-5.3.16.jar:5.3.16]
-	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:600) ~[spring-orm-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 124 common frames omitted
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:na]
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189) ~[java.sql:na]
-	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:155) ~[spring-jdbc-5.3.16.jar:5.3.16]
-	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:146) ~[spring-jdbc-5.3.16.jar:5.3.16]
-	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205) ~[spring-jdbc-5.3.16.jar:5.3.16]
-	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169) ~[spring-jdbc-5.3.16.jar:5.3.16]
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
-	... 142 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:121) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	... 154 common frames omitted
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	... 157 common frames omitted
-Error:  Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.112 s <<< FAILURE! - in com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
-Error:  mainMethodCallsSpringApplicationRun  Time elapsed: 6.107 s  <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration' defined in file [/home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/classes/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; 
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
-Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
-Communications link failure
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
-Communications link failure
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
-[INFO] Running com.jtspringproject.JtSpringProject.models.CategoryTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.jtspringproject.JtSpringProject.models.CategoryTest
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ JtSpringProject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/resources
 [INFO] 
-[INFO] Results:
-[INFO] 
-Error:  Errors: 
-Error:    JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun:32 » UnsatisfiedDependency
-[INFO] 
-Error:  Tests run: 34, Failures: 0, Errors: 1, Skipped: 0
-[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ JtSpringProject ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/test-classes
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[20,6] cannot find symbol
+  symbol:   class Mock
+  location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[26,82] incompatible types: no instance(s) of type variable(s) T exist so that org.mockito.MockedStatic<T> conforms to com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.MockedStatic<org.springframework.boot.SpringApplication>
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[27,36] incompatible types: com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.MockedStatic.Verification is not a functional interface
+    no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.MockedStatic.Verification
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[34,36] incompatible types: com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.MockedStatic.Verification is not a functional interface
+    no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.MockedStatic.Verification
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[44,30] incompatible types: possible lossy conversion from double to int
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[99,33] incompatible types: possible lossy conversion from double to int
+[INFO] 6 errors 
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.863 s
-[INFO] Finished at: 2025-09-13T15:01:16Z
+[INFO] Total time:  9.339 s
+[INFO] Finished at: 2025-09-13T17:07:59Z
 [INFO] ------------------------------------------------------------------------
-Error:  Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project JtSpringProject: There are test failures.
-Error:  
-Error:  Please refer to /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/surefire-reports for the individual test results.
-Error:  Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+Error:  Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[20,6] cannot find symbol
+Error:    symbol:   class Mock
+Error:    location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[26,82] incompatible types: no instance(s) of type variable(s) T exist so that org.mockito.MockedStatic<T> conforms to com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.MockedStatic<org.springframework.boot.SpringApplication>
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[27,36] incompatible types: com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.MockedStatic.Verification is not a functional interface
+Error:      no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.MockedStatic.Verification
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[34,36] incompatible types: com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.MockedStatic.Verification is not a functional interface
+Error:      no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.MockedStatic.Verification
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[44,30] incompatible types: possible lossy conversion from double to int
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[99,33] incompatible types: possible lossy conversion from double to int
 Error:  -> [Help 1]
 Error:  
 Error:  To see the full stack trace of the errors, re-run Maven with the -e switch.
@@ -488,29 +63,164 @@ Run echo "🔄 Starting error-driven test improvement..."
 Found 5 Java source files
 🔄 Iteration 1/5
 🧪 Running Maven tests...
-❌ Tests failing with 54 error(s)
+❌ Tests failing with 19 error(s)
 🔍 Error details:
-  Error 1: 2025-09-13 15:01:26.328  WARN 2423 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
-com.mysql.cj.jdbc.exceptions.Communication...
-  Error 2: 
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsExceptio...
-  Error 3: The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException...
+  Error 1: [INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------...
+  Error 2: [INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/J...
+  Error 3:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/j...
 📝 Processing JtSpringProjectApplication.java -> JtSpringProjectApplicationTest.java
 🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java based on errors...
+🔍 Captured 19 error messages:
+  Error 1: [INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[I...
+  Error 2: [INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-com...
+  Error 3:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/r...
+Error:  4: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  5: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 6:     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplica...
+Error:  7: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 8:     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplica...
+Error:  9: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 10: [INFO] ------------------------------------------------------------------------
+Error:  Failed to ex...
+Error:  11: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (def...
+Error:  12: [ERROR]   symbol:   class Mock
+Error:    location: class com.jtspringproject.JtSpringProject.JtSprin...
+Error:  13: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error: ...
+Error:  14: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  15: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  16: [ERROR]     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjec...
+Error:  17: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  18: [ERROR]     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjec...
+Error:  19: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
 ❌ Failed to generate test for JtSpringProjectApplication.java
 📝 Processing Category.java -> CategoryTest.java
 🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java based on errors...
+🔍 Captured 19 error messages:
+  Error 1: [INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[I...
+  Error 2: [INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-com...
+  Error 3:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/r...
+Error:  4: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  5: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 6:     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplica...
+Error:  7: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 8:     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplica...
+Error:  9: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 10: [INFO] ------------------------------------------------------------------------
+Error:  Failed to ex...
+Error:  11: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (def...
+Error:  12: [ERROR]   symbol:   class Mock
+Error:    location: class com.jtspringproject.JtSpringProject.JtSprin...
+Error:  13: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error: ...
+Error:  14: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  15: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  16: [ERROR]     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjec...
+Error:  17: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  18: [ERROR]     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjec...
+Error:  19: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
 ❌ Failed to generate test for Category.java
 📝 Processing categoryService.java -> categoryServiceTest.java
 🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java based on errors...
+🔍 Captured 19 error messages:
+  Error 1: [INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[I...
+  Error 2: [INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-com...
+  Error 3:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/r...
+Error:  4: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  5: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 6:     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplica...
+Error:  7: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 8:     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplica...
+Error:  9: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 10: [INFO] ------------------------------------------------------------------------
+Error:  Failed to ex...
+Error:  11: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (def...
+Error:  12: [ERROR]   symbol:   class Mock
+Error:    location: class com.jtspringproject.JtSpringProject.JtSprin...
+Error:  13: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error: ...
+Error:  14: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  15: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  16: [ERROR]     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjec...
+Error:  17: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  18: [ERROR]     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjec...
+Error:  19: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
 ❌ Failed to generate test for categoryService.java
 📝 Processing productService.java -> productServiceTest.java
 🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java based on errors...
+🔍 Captured 19 error messages:
+  Error 1: [INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[I...
+  Error 2: [INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-com...
+  Error 3:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/r...
+Error:  4: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  5: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 6:     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplica...
+Error:  7: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 8:     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplica...
+Error:  9: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 10: [INFO] ------------------------------------------------------------------------
+Error:  Failed to ex...
+Error:  11: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (def...
+Error:  12: [ERROR]   symbol:   class Mock
+Error:    location: class com.jtspringproject.JtSpringProject.JtSprin...
+Error:  13: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error: ...
+Error:  14: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  15: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  16: [ERROR]     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjec...
+Error:  17: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  18: [ERROR]     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjec...
+Error:  19: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
 ❌ Failed to generate test for productService.java
 📝 Processing userService.java -> userServiceTest.java
 🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java based on errors...
+🔍 Captured 19 error messages:
+  Error 1: [INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[I...
+  Error 2: [INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-com...
+  Error 3:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/r...
+Error:  4: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  5: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 6:     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplica...
+Error:  7: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 8:     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjectApplica...
+Error:  9: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+  Error 10: [INFO] ------------------------------------------------------------------------
+Error:  Failed to ex...
+Error:  11: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (def...
+Error:  12: [ERROR]   symbol:   class Mock
+Error:    location: class com.jtspringproject.JtSpringProject.JtSprin...
+Error:  13: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error: ...
+Error:  14: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  15: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  16: [ERROR]     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjec...
+Error:  17: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
+Error:  18: [ERROR]     no abstract method found in interface com.jtspringproject.JtSpringProject.JtSpringProjec...
+Error:  19: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/...
 ❌ Failed to generate test for userService.java
 ❌ No tests could be improved this iteration
 🧪 Running Maven tests...
@@ -518,3 +228,4 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
   Tests passing: ❌
   Coverage: 0.0% (target: 80.0%)
 ❌ Some tests still failing after error-driven iteration
+Error: Process completed with exit code 1.
