@@ -132,3 +132,36 @@ runs:
             print(f'✅ Coverage {coverage}% meets threshold {threshold}%')
         "
 
+    - name: Commit generated test files
+      shell: bash
+      run: |
+        echo "💾 Committing generated test files..."
+        
+        # Configure git
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Check if there are any test files to commit
+        if [ -d "$TEST_PATH" ] && [ "$(find $TEST_PATH -name "*.java" -type f | wc -l)" -gt 0 ]; then
+          echo "📁 Found test files to commit:"
+          find $TEST_PATH -name "*.java" -type f | head -10
+          
+          # Add all test files
+          git add $TEST_PATH/
+          
+          # Check if there are changes to commit
+          if ! git diff --staged --quiet; then
+            echo "✅ Committing generated test files..."
+            git commit -m "🤖 AI-generated test files - Coverage: $(python3 -c "import sys; sys.path.append('.'); from ci_iterate_tests import read_line_coverage; print(f'{read_line_coverage()}%')")"
+            
+            # Push the changes
+            echo "🚀 Pushing test files to repository..."
+            git push origin ${{ github.ref_name }}
+            echo "✅ Test files committed and pushed successfully!"
+          else
+            echo "ℹ️ No changes to commit"
+          fi
+        else
+          echo "ℹ️ No test files found to commit"
+        fi
+
