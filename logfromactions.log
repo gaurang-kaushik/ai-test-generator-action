@@ -1,39 +1,35 @@
-Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0-M9/qdox-2.0-M9.jar (317 kB at 14 MB/s)
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 22 source files to /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/classes
-[INFO] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartProductDao.java: Some input files use unchecked or unsafe operations.
-[INFO] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartProductDao.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- resources:3.2.0:testResources (default-testResources) @ JtSpringProject ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Using 'UTF-8' encoding to copy filtered properties files.
-[INFO] skip non existing resourceDirectory /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/resources
-[INFO] 
 [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ JtSpringProject ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 5 source files to /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/test-classes
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
 [INFO] -------------------------------------------------------------
 Error:  COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[10,19] cannot find symbol
-  symbol:   class MockitoExtension
-  location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[27,13] cannot find symbol
-  symbol: class MockitoExtension
-[INFO] 2 errors 
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[20,6] cannot find symbol
+  symbol:   class Mock
+  location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[26,14] cannot find symbol
+  symbol:   class MockedStatic
+  location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[46,30] incompatible types: possible lossy conversion from double to int
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[47,33] incompatible types: java.lang.String cannot be converted to com.jtspringproject.JtSpringProject.models.Category
+[INFO] 4 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  10.350 s
-[INFO] Finished at: 2025-09-13T17:19:00Z
+[INFO] Total time:  11.096 s
+[INFO] Finished at: 2025-09-13T17:24:04Z
 [INFO] ------------------------------------------------------------------------
 Error:  Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[10,19] cannot find symbol
-Error:    symbol:   class MockitoExtension
-Error:    location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[27,13] cannot find symbol
-Error:    symbol: class MockitoExtension
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[20,6] cannot find symbol
+Error:    symbol:   class Mock
+Error:    location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[26,14] cannot find symbol
+Error:    symbol:   class MockedStatic
+Error:    location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[46,30] incompatible types: possible lossy conversion from double to int
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[47,33] incompatible types: java.lang.String cannot be converted to com.jtspringproject.JtSpringProject.models.Category
 Error:  -> [Help 1]
 Error:  
 Error:  To see the full stack trace of the errors, re-run Maven with the -e switch.
@@ -50,134 +46,185 @@ Run echo "🔄 Starting error-driven test improvement..."
 Found 5 Java source files
 🔄 Iteration 1/5
 🧪 Running Maven tests...
-❌ Tests failing with 6 error(s)
+❌ Tests failing with 12 error(s)
 🔍 Error details:
   Error 1: [INFO] -------------------------------------------------------------
 Error:  COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------...
   Error 2: [INFO] -------------------------------------------------------------
 Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/J...
-  Error 3:   location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServi...
+  Error 3:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/j...
 📝 Processing JtSpringProjectApplication.java -> JtSpringProjectApplicationTest.java
 🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java based on errors...
-🔍 Captured 6 total errors, 6 relevant to JtSpringProjectApplication.java:
-  Relevant Error 1: [INFO] -------------------------------------------------------------
-Error:  COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------...
-  Relevant Error 2: [INFO] -------------------------------------------------------------
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/J...
-  Relevant Error 3:   location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServi...
-  Relevant Error 4: [INFO] ------------------------------------------------------------------------
-Error:  Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on...
-Error: ant Error 5: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
-Error:  /ho...
-Error: ant Error 6: [ERROR]   location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categ...
-🤖 AI will receive error feedback of length: 1952 characters
-🤖 First 500 chars of error feedback: [INFO] -------------------------------------------------------------
-Error:  COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[INFO] -------------------------------------------------------------
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[10,19] cannot find symbol
-  symbol:   class MockitoExtension
-  location: package or...
-❌ Failed to generate test for JtSpringProjectApplication.java
-📝 Processing Category.java -> CategoryTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java based on errors...
-🔍 Captured 6 total errors, 6 relevant to Category.java:
-  Relevant Error 1: [INFO] -------------------------------------------------------------
-Error:  COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------...
-  Relevant Error 2: [INFO] -------------------------------------------------------------
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/J...
-  Relevant Error 3:   location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServi...
-  Relevant Error 4: [INFO] ------------------------------------------------------------------------
-Error:  Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on...
-Error: ant Error 5: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
-Error:  /ho...
-Error: ant Error 6: [ERROR]   location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categ...
-🤖 AI will receive error feedback of length: 1952 characters
-🤖 First 500 chars of error feedback: [INFO] -------------------------------------------------------------
-Error:  COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[INFO] -------------------------------------------------------------
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[10,19] cannot find symbol
-  symbol:   class MockitoExtension
-  location: package or...
-❌ Failed to generate test for Category.java
-📝 Processing categoryService.java -> categoryServiceTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java based on errors...
-🔍 Captured 6 total errors, 5 relevant to categoryService.java:
+🔍 Captured 12 total errors, 6 relevant to JtSpringProjectApplication.java:
   Relevant Error 1: [INFO] -------------------------------------------------------------
 Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/J...
-  Relevant Error 2:   location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServi...
+  Relevant Error 2:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/j...
   Relevant Error 3: [INFO] ------------------------------------------------------------------------
 Error:  Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on...
 Error: ant Error 4: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
 Error:  /ho...
-Error: ant Error 5: [ERROR]   location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categ...
-🤖 AI will receive error feedback of length: 1785 characters
+Error: ant Error 5: [ERROR]   symbol:   class Mock
+Error:    location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-s...
+Error: ant Error 6: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/ja...
+🤖 AI will receive error feedback of length: 2203 characters
 🤖 First 500 chars of error feedback: [INFO] -------------------------------------------------------------
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[10,19] cannot find symbol
-  symbol:   class MockitoExtension
-  location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/ca...
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[20,6] cannot find symbol
+  symbol:   class Mock
+  location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/j...
+🤖 Calling generate_tests.py with enhanced prompt...
+🤖 Enhanced prompt length: 6108 characters
+Error generating test with enhanced prompt: JavaContextAnalyzer.generate_comprehensive_context() missing 1 required positional argument: 'java_file'
+🤖 Generate test success: False
+❌ Failed to generate test for JtSpringProjectApplication.java
+📝 Processing Category.java -> CategoryTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java based on errors...
+🔍 Captured 12 total errors, 12 relevant to Category.java:
+  Relevant Error 1: [INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------...
+  Relevant Error 2: [INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/J...
+  Relevant Error 3:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/j...
+  Relevant Error 4:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/j...
+Error: ant Error 5: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[46,30] incompatible ...
+  Relevant Error 6: [INFO] ------------------------------------------------------------------------
+Error:  Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on...
+Error: ant Error 7: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
+Error:  /ho...
+Error: ant Error 8: [ERROR]   symbol:   class Mock
+Error:    location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-s...
+Error: ant Error 9: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/ja...
+Error: ant Error 10: [ERROR]   symbol:   class MockedStatic
+Error:    location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-p...
+Error: ant Error 11: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/ja...
+Error: ant Error 12: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[46,30] incompatible ...
+🤖 AI will receive error feedback of length: 5173 characters
+🤖 First 500 chars of error feedback: [INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[20,6] cannot find symbol
+  symbol:   class Mock
+  location: class com.jtspringpro...
+🤖 Calling generate_tests.py with enhanced prompt...
+🤖 Enhanced prompt length: 8928 characters
+Error generating test with enhanced prompt: JavaContextAnalyzer.generate_comprehensive_context() missing 1 required positional argument: 'java_file'
+🤖 Generate test success: False
+❌ Failed to generate test for Category.java
+📝 Processing categoryService.java -> categoryServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java based on errors...
+🔍 Captured 12 total errors, 12 relevant to categoryService.java:
+  Relevant Error 1: [INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------...
+  Relevant Error 2: [INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/J...
+  Relevant Error 3:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/j...
+  Relevant Error 4:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/j...
+Error: ant Error 5: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[46,30] incompatible ...
+  Relevant Error 6: [INFO] ------------------------------------------------------------------------
+Error:  Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on...
+Error: ant Error 7: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
+Error:  /ho...
+Error: ant Error 8: [ERROR]   symbol:   class Mock
+Error:    location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-s...
+Error: ant Error 9: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/ja...
+Error: ant Error 10: [ERROR]   symbol:   class MockedStatic
+Error:    location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-p...
+Error: ant Error 11: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/ja...
+Error: ant Error 12: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[46,30] incompatible ...
+🤖 AI will receive error feedback of length: 5173 characters
+🤖 First 500 chars of error feedback: [INFO] -------------------------------------------------------------
+Error:  COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[20,6] cannot find symbol
+  symbol:   class Mock
+  location: class com.jtspringpro...
+🤖 Calling generate_tests.py with enhanced prompt...
+🤖 Enhanced prompt length: 12179 characters
+Error generating test with enhanced prompt: JavaContextAnalyzer.generate_comprehensive_context() missing 1 required positional argument: 'java_file'
+🤖 Generate test success: False
 ❌ Failed to generate test for categoryService.java
 📝 Processing productService.java -> productServiceTest.java
 🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java based on errors...
-🔍 Captured 6 total errors, 6 relevant to productService.java:
-  Relevant Error 1: [INFO] -------------------------------------------------------------
-Error:  COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------...
-  Relevant Error 2: [INFO] -------------------------------------------------------------
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/J...
-  Relevant Error 3:   location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServi...
-  Relevant Error 4: [INFO] ------------------------------------------------------------------------
-Error:  Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on...
-Error: ant Error 5: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
-Error:  /ho...
-Error: ant Error 6: [ERROR]   location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categ...
-🤖 AI will receive error feedback of length: 1952 characters
-🤖 First 500 chars of error feedback: [INFO] -------------------------------------------------------------
-Error:  COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[INFO] -------------------------------------------------------------
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[10,19] cannot find symbol
-  symbol:   class MockitoExtension
-  location: package or...
+🔍 Captured 12 total errors, 5 relevant to productService.java:
+  Relevant Error 1:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/j...
+Error: ant Error 2: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[46,30] incompatible ...
+Error: ant Error 3: [ERROR]   symbol:   class MockedStatic
+Error:    location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-p...
+Error: ant Error 4: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/ja...
+Error: ant Error 5: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[46,30] incompatible ...
+🤖 AI will receive error feedback of length: 2802 characters
+🤖 First 500 chars of error feedback:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[46,30] incompatible types: possible lossy conversion from double to int
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productS...
+🤖 Calling generate_tests.py with enhanced prompt...
+🤖 Enhanced prompt length: 9115 characters
+Error generating test with enhanced prompt: JavaContextAnalyzer.generate_comprehensive_context() missing 1 required positional argument: 'java_file'
+🤖 Generate test success: False
 ❌ Failed to generate test for productService.java
 📝 Processing userService.java -> userServiceTest.java
 🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java based on errors...
-🔍 Captured 6 total errors, 6 relevant to userService.java:
+🔍 Captured 12 total errors, 12 relevant to userService.java:
   Relevant Error 1: [INFO] -------------------------------------------------------------
 Error:  COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------...
   Relevant Error 2: [INFO] -------------------------------------------------------------
 Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/J...
-  Relevant Error 3:   location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServi...
-  Relevant Error 4: [INFO] ------------------------------------------------------------------------
+  Relevant Error 3:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/j...
+  Relevant Error 4:   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/j...
+Error: ant Error 5: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[46,30] incompatible ...
+  Relevant Error 6: [INFO] ------------------------------------------------------------------------
 Error:  Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on...
-Error: ant Error 5: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
+Error: ant Error 7: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
 Error:  /ho...
-Error: ant Error 6: [ERROR]   location: package org.mockito
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categ...
-🤖 AI will receive error feedback of length: 1952 characters
+Error: ant Error 8: [ERROR]   symbol:   class Mock
+Error:    location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-s...
+Error: ant Error 9: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/ja...
+Error: ant Error 10: [ERROR]   symbol:   class MockedStatic
+Error:    location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-p...
+Error: ant Error 11: [ERROR]   location: class com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/ja...
+Error: ant Error 12: [ERROR] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[46,30] incompatible ...
+🤖 AI will receive error feedback of length: 5173 characters
 🤖 First 500 chars of error feedback: [INFO] -------------------------------------------------------------
 Error:  COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
 [INFO] -------------------------------------------------------------
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[10,19] cannot find symbol
-  symbol:   class MockitoExtension
-  location: package or...
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java:[20,6] cannot find symbol
+  symbol:   class Mock
+  location: class com.jtspringpro...
+🤖 Calling generate_tests.py with enhanced prompt...
+🤖 Enhanced prompt length: 12790 characters
+Error generating test with enhanced prompt: JavaContextAnalyzer.generate_comprehensive_context() missing 1 required positional argument: 'java_file'
+🤖 Generate test success: False
 ❌ Failed to generate test for userService.java
 ❌ No tests could be improved this iteration
 🧪 Running Maven tests...

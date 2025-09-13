@@ -297,7 +297,7 @@ def generate_test_with_prompt(java_file: Path, test_file: Path, enhanced_prompt:
         # Generate context
         from enhanced_context_generator import JavaContextAnalyzer
         analyzer = JavaContextAnalyzer(java_file)
-        context = analyzer.generate_comprehensive_context()
+        context = analyzer.generate_comprehensive_context(java_file)
         
         # Use the enhanced prompt instead of the regular one
         user_prompt = enhanced_prompt
