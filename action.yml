@@ -136,9 +136,12 @@ runs:
             
             # Push the changes
             echo "🚀 Pushing all test files to repository..."
-            # Use the branch name from GitHub context instead of git branch --show-current
-            # which fails in detached HEAD state
-            BRANCH_NAME="${{ github.ref_name }}"
+            # Use the correct branch name - for PRs use head_ref, for pushes use ref_name
+            if [ "${{ github.event_name }}" = "pull_request" ]; then
+              BRANCH_NAME="${{ github.head_ref }}"
+            else
+              BRANCH_NAME="${{ github.ref_name }}"
+            fi
             echo "📋 Branch name: $BRANCH_NAME"
             git push origin HEAD:$BRANCH_NAME
             echo "✅ All test files committed and pushed successfully!"
@@ -167,9 +170,12 @@ runs:
             
             # Push the changes
             echo "🚀 Pushing working test files to repository..."
-            # Use the branch name from GitHub context instead of git branch --show-current
-            # which fails in detached HEAD state
-            BRANCH_NAME="${{ github.ref_name }}"
+            # Use the correct branch name - for PRs use head_ref, for pushes use ref_name
+            if [ "${{ github.event_name }}" = "pull_request" ]; then
+              BRANCH_NAME="${{ github.head_ref }}"
+            else
+              BRANCH_NAME="${{ github.ref_name }}"
+            fi
             echo "📋 Branch name: $BRANCH_NAME"
             git push origin HEAD:$BRANCH_NAME
             echo "✅ Working test files committed and pushed successfully!"
