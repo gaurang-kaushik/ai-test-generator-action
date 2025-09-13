@@ -135,7 +135,10 @@ runs:
             
             # Push the changes
             echo "🚀 Pushing test files to repository..."
-            git push origin ${{ github.ref_name }}
+            # Use the current branch name from git instead of github.ref_name
+            CURRENT_BRANCH=$(git branch --show-current)
+            echo "📋 Current branch: $CURRENT_BRANCH"
+            git push origin $CURRENT_BRANCH
             echo "✅ Test files committed and pushed successfully!"
           else
             echo "ℹ️ No changes to commit"
