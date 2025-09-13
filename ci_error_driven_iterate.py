@@ -154,6 +154,10 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
            2. All method calls use correct syntax
            3. All variable declarations are complete
            4. All imports are correct and available
+           5. TYPE SAFETY: Check field types before setting values
+              - If field is 'private int price', use setPrice(10) NOT setPrice(10.0)
+              - If field is 'private double price', use setPrice(10.0) NOT setPrice(10)
+              - If field is 'private String name', use setName("value") NOT setName(123)
            5. All method names match exactly (case-sensitive)
 
            MOST IMPORTANT FIXES NEEDED:
@@ -197,6 +201,10 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
            - Missing imports (CategoryRepository, CategoryService, etc.)
            - Type conversion errors (double to int, etc.)
            - Syntax errors
+           - TYPE SAFETY: Verify all setter calls use correct parameter types
+             * If field is 'private int price', use setPrice(10) NOT setPrice(10.0)
+             * If field is 'private double price', use setPrice(10.0) NOT setPrice(10)
+             * If field is 'private String name', use setName("value") NOT setName(123)
            - Missing class references
            - All imports must exist in the project
            - All method calls must exist in the actual classes
