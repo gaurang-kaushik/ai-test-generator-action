@@ -26,9 +26,25 @@ def get_changed_java_files(base_sha: str, head_sha: str) -> List[Path]:
     """Get only changed Java files - NO FALLBACK to all files"""
     print(f"🔍 Attempting git diff: {base_sha}..{head_sha}")
     
+    # Validate SHAs first
+    def is_valid_sha(sha: str) -> bool:
+        try:
+            _code, _out = run(["git", "rev-parse", "--verify", sha], check=False)
+            return _code == 0
+        except:
+            return False
+    
     # Try different git diff approaches to handle various scenarios
     try:
-        # First try the standard range approach
+        # First validate both SHAs
+        if not is_valid_sha(base_sha):
+            print(f"⚠️ BASE_SHA {base_sha} is invalid, trying HEAD~1")
+            base_sha = "HEAD~1"
+        if not is_valid_sha(head_sha):
+            print(f"⚠️ HEAD_SHA {head_sha} is invalid, trying HEAD")
+            head_sha = "HEAD"
+        
+        # Try the range approach
         _code, out = run(["git", "diff", "--name-only", f"{base_sha}..{head_sha}"])
         print(f"✅ Git diff successful: {base_sha}..{head_sha}")
     except RuntimeError as e:

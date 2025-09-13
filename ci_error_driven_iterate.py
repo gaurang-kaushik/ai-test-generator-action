@@ -176,8 +176,24 @@ def get_all_java_files() -> List[Path]:
     head_sha = os.environ.get("HEAD_SHA") or os.environ.get("GITHUB_SHA", "")
     
     if base_sha and head_sha:
+        # Validate SHAs first
+        def is_valid_sha(sha: str) -> bool:
+            try:
+                _code, _out = run(["git", "rev-parse", "--verify", sha], check=False)
+                return _code == 0
+            except:
+                return False
+        
         # Use git diff to get only changed files
         try:
+            # First validate both SHAs
+            if not is_valid_sha(base_sha):
+                print(f"⚠️ BASE_SHA {base_sha} is invalid, trying HEAD~1")
+                base_sha = "HEAD~1"
+            if not is_valid_sha(head_sha):
+                print(f"⚠️ HEAD_SHA {head_sha} is invalid, trying HEAD")
+                head_sha = "HEAD"
+            
             _code, out = run(["git", "diff", "--name-only", f"{base_sha}..{head_sha}"])
             files = [line.strip() for line in out.splitlines() if line.strip()]
             java_files = []
