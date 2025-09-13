@@ -303,7 +303,15 @@ def generate_test_with_prompt(java_file: Path, test_file: Path, enhanced_prompt:
         user_prompt = enhanced_prompt
         
         # Generate the test
-        test_content = generate_test_content(java_code, context, user_prompt, "gemini-2.0-flash-exp", os.environ.get("GOOGLE_API_KEY", ""))
+        # Initialize the model
+        if not genai:
+            raise RuntimeError("google-generativeai not installed. Run: pip install google-generativeai")
+        
+        genai.configure(api_key=os.environ.get("GOOGLE_API_KEY", ""))
+        model = genai.GenerativeModel("gemini-2.0-flash-exp")
+        
+        # Generate the test content
+        test_content = generate_tests(model, user_prompt)
         
         # Write the test file
         test_file.parent.mkdir(parents=True, exist_ok=True)
