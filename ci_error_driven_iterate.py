@@ -157,11 +157,19 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
 
            Generate a corrected test that will compile without ANY errors. Focus on fixing the constructor and method name issues first, and ensure database connections are properly mocked.
            
+           ⚠️ CRITICAL OUTPUT FORMAT:
+           - Generate ONLY the Java test code
+           - Do NOT wrap code in markdown code blocks (```java ... ```)
+           - Do NOT include any markdown formatting
+           - Start directly with package declaration
+           - End with the closing brace of the class
+           
            ⚠️ FINAL CHECK: Before returning the code, verify it will compile by checking for:
            - Missing semicolons
            - Incorrect method calls
            - Missing imports
            - Syntax errors
+           - No markdown formatting
 """
     
     # Write enhanced prompt to a temporary file
