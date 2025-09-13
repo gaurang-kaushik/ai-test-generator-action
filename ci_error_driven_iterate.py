@@ -82,15 +82,17 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
     error_feedback = "\n".join(error_messages) if error_messages else "No specific errors captured"
     
     enhanced_prompt = f"""
-IMPORTANT: The previous test generation failed with these errors:
+CRITICAL: The previous test generation failed with these specific errors:
 {error_feedback}
 
-Please generate a CORRECTED test that addresses these specific issues:
-1. Ensure ALL database connections are properly mocked
-2. Use @MockBean for Spring context dependencies
-3. Mock all @Autowired, @Repository, @Service dependencies
-4. Use @ExtendWith(MockitoExtension.class) for unit tests
-5. Do NOT let tests connect to real databases
+MOST IMPORTANT FIXES NEEDED:
+1. CONSTRUCTOR ERRORS: Use NO-ARGS constructor + setters for JPA entities
+   - WRONG: new Category(1, "name")
+   - CORRECT: new Category(); category.setId(1); category.setName("name")
+2. METHOD NAMES: Use EXACT camelCase method names from the actual class
+3. TYPE SAFETY: Use EXACT types (int, not long; String, not Object)
+4. IMPORTS: Include ALL necessary imports
+5. MOCKITO: Use proper mocking patterns for Spring Boot
 
 Original Java code:
 {java_code}
@@ -98,7 +100,7 @@ Original Java code:
 Previous failing test (if any):
 {failing_test_code}
 
-Generate a corrected test that will compile and run without database connection errors.
+Generate a corrected test that will compile without ANY errors. Focus on fixing the constructor and method name issues first.
 """
     
     # Write enhanced prompt to a temporary file

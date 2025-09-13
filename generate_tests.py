@@ -80,6 +80,8 @@ def build_user_prompt(java_code: str, context_file: str = None) -> str:
         "END.\n\n"
         "CRITICAL REQUIREMENTS - READ CAREFULLY:\n"
         "1. CONSTRUCTOR USAGE: Use NO-ARGS constructor + setters for JPA entities. Do NOT use parameterized constructors unless explicitly shown in the ENHANCED CONTEXT.\n"
+        "   - WRONG: new Category(1, \"name\")\n"
+        "   - CORRECT: new Category(); category.setId(1); category.setName(\"name\")\n"
         "2. METHOD NAMES: Use EXACT method names from the ENHANCED CONTEXT - follow camelCase convention (e.g., setCartId, not setCart_id).\n"
         "3. TYPE SAFETY: Use EXACT types from the ENHANCED CONTEXT - no type conversions (e.g., use int, not long).\n"
         "4. IMPORTS: Include ALL necessary imports - check the IMPORTS section in ENHANCED CONTEXT.\n"

@@ -1,3 +1,65 @@
+✅ Dependencies installed
+Run echo "🚀 Starting AI Test Generator..."
+🚀 Starting AI Test Generator...
+📋 Environment variables:
+  - SOURCE_PATH: JtProject/src/main/java
+  - TEST_PATH: JtProject/src/test/java
+  - BASE_SHA: 505803be16c09867eed35ee47e7e2c204d7ab503
+  - HEAD_SHA: 3dbb796dfb9106c52c1f4d65d65f9a636a36ddab
+  - MODEL: gemini-2.0-pro-exp
+  - GOOGLE_API_KEY: AIzaSyCacd...
+
+🔍 Checking for changed files...
+🔍 Starting ci_generate_tests.py...
+📋 Git SHAs - BASE: 505803be16c09867eed35ee47e7e2c204d7ab503, HEAD: 3dbb796dfb9106c52c1f4d65d65f9a636a36ddab
+🔍 Getting changed Java files...
+🔍 Attempting git diff: 505803be16c09867eed35ee47e7e2c204d7ab503..3dbb796dfb9106c52c1f4d65d65f9a636a36ddab
+✅ Git diff successful: 505803be16c09867eed35ee47e7e2c204d7ab503..3dbb796dfb9106c52c1f4d65d65f9a636a36ddab
+🎯 Found 5 changed Java files - generating tests only for these
+  - JtProject/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java
+  - JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java
+  - JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java
+  - JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java
+  - JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java
+📁 Found 5 changed Java files
+Generating test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java -> /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTest.java
+Generating test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java -> /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/CategoryTest.java
+Generating test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java -> /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java
+Generating test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java -> /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java
+Generating test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java -> /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/userServiceTest.java
+✅ Initial test generation completed
+Run echo "🔍 Running Maven tests with coverage..."
+🔍 Running Maven tests with coverage...
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/2.6.4/spring-boot-starter-parent-2.6.4.pom
+Progress (1): 1.4/8.6 kB
+Progress (1): 2.8/8.6 kB
+Progress (1): 4.1/8.6 kB
+Progress (1): 5.5/8.6 kB
+Progress (1): 6.9/8.6 kB
+Progress (1): 8.3/8.6 kB
+Progress (1): 8.6 kB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/2.6.4/spring-boot-starter-parent-2.6.4.pom (8.6 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/2.6.4/spring-boot-dependencies-2.6.4.pom
+Progress (1): 1.4/105 kB
+Progress (1): 2.8/105 kB
+Progress (1): 4.1/105 kB
+Progress (1): 5.5/105 kB
+Progress (1): 6.9/105 kB
+Progress (1): 8.3/105 kB
+Progress (1): 9.7/105 kB
+Progress (1): 11/105 kB 
+Progress (1): 12/105 kB
+Progress (1): 14/105 kB
+Progress (1): 15/105 kB
+Progress (1): 16/105 kB
+Progress (1): 33/105 kB
+Progress (1): 49/105 kB
+Progress (1): 64/105 kB
+Progress (1): 81/105 kB
+
+
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 22 source files to /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/classes
 [INFO] /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartProductDao.java: Some input files use unchecked or unsafe operations.
@@ -10,164 +72,51 @@
 [INFO] 
 [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ JtSpringProject ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 22 source files to /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/test-classes
-[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] Compiling 5 source files to /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/test-classes
 [INFO] -------------------------------------------------------------
 Error:  COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartProductDaoTest.java:[48,51] no suitable method found for thenReturn(com.jtspringproject.JtSpringProject.models.CartProduct)
-    method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable) is not applicable
-      (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProduct cannot be converted to java.io.Serializable)
-    method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
-      (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProduct cannot be converted to java.io.Serializable)
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartProductDaoTest.java:[58,57] cannot find symbol
-  symbol:   method mock(java.lang.Class<org.hibernate.query.Query>)
-  location: class com.jtspringproject.JtSpringProject.dao.cartProductDaoTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartProductDaoTest.java:[74,68] cannot find symbol
-  symbol:   method mock(java.lang.Class<org.hibernate.query.NativeQuery>)
-  location: class com.jtspringproject.JtSpringProject.dao.cartProductDaoTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartProductDaoTest.java:[85,68] cannot find symbol
-  symbol:   method mock(java.lang.Class<org.hibernate.query.NativeQuery>)
-  location: class com.jtspringproject.JtSpringProject.dao.cartProductDaoTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/CartProductTest.java:[33,20] incompatible types: possible lossy conversion from long to int
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/CartProductTest.java:[35,23] incompatible types: possible lossy conversion from long to int
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/CartProductTest.java:[51,46] incompatible types: long cannot be converted to java.lang.Integer
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/CartProductTest.java:[53,23] incompatible types: possible lossy conversion from long to int
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/CartProductTest.java:[55,26] incompatible types: possible lossy conversion from long to int
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/productDaoTest.java:[63,36] no suitable method found for thenReturn(com.jtspringproject.JtSpringProject.models.Product)
-    method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable) is not applicable
-      (argument mismatch; com.jtspringproject.JtSpringProject.models.Product cannot be converted to java.io.Serializable)
-    method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
-      (argument mismatch; com.jtspringproject.JtSpringProject.models.Product cannot be converted to java.io.Serializable)
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[65,34] 'void' type not allowed here
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[105,49] cannot find symbol
-  symbol:   class NoResultException
-  location: class com.jtspringproject.JtSpringProject.dao.userDaoTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[152,49] cannot find symbol
-  symbol:   class NoResultException
-  location: class com.jtspringproject.JtSpringProject.dao.userDaoTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[42,31] DRIVER has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[43,31] PASSWORD has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[44,31] URL has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[45,31] USERNAME has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[46,31] DIALECT has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[47,31] SHOW_SQL has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[48,31] HBM2DDL_AUTO has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[49,31] PACKAGES_TO_SCAN has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[60,77] cannot find symbol
-  symbol:   method getDriverClassName()
-  location: class org.springframework.jdbc.datasource.DriverManagerDataSource
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[68,46] 'void' type not allowed here
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/cartServiceTest.java:[45,17] cannot find symbol
-  symbol:   method setCustomer_id(int)
-  location: variable testCart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/cartServiceTest.java:[46,17] cannot find symbol
-  symbol:   method setProduct_id(int)
-  location: variable testCart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/cartServiceTest.java:[47,17] cannot find symbol
-  symbol:   method setQty(int)
-  location: variable testCart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/cartServiceTest.java:[48,17] cannot find symbol
-  symbol:   method setPrice(int)
-  location: variable testCart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/ProductTest.java:[46,17] cannot find symbol
-  symbol:   method setCategoryId(int)
-  location: variable category of type com.jtspringproject.JtSpringProject.models.Category
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/controller/UserControllerTest.java:[57,9] cannot find symbol
-  symbol:   variable MockitoAnnotations
-  location: class com.jtspringproject.JtSpringProject.controller.UserControllerTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartDaoTest.java:[54,13] cannot find symbol
-  symbol:   method setCart_id(int)
-  location: variable cart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartDaoTest.java:[87,13] cannot find symbol
-  symbol:   method setCart_id(int)
-  location: variable cart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartDaoTest.java:[97,13] cannot find symbol
-  symbol:   method setCart_id(int)
-  location: variable cart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[47,30] incompatible types: possible lossy conversion from double to int
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[92,33] incompatible types: possible lossy conversion from double to int
-[INFO] 34 errors 
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[61,28] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+  required: no arguments
+  found: int,java.lang.String
+  reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[62,28] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+  required: no arguments
+  found: int,java.lang.String
+  reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[83,33] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+  required: no arguments
+  found: int,java.lang.String
+  reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[94,33] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+  required: no arguments
+  found: int,java.lang.String
+  reason: actual and formal argument lists differ in length
+[INFO] 4 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  9.608 s
-[INFO] Finished at: 2025-09-13T14:02:48Z
+[INFO] Total time:  10.740 s
+[INFO] Finished at: 2025-09-13T14:42:42Z
 [INFO] ------------------------------------------------------------------------
 Error:  Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project JtSpringProject: Compilation failure: Compilation failure: 
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartProductDaoTest.java:[48,51] no suitable method found for thenReturn(com.jtspringproject.JtSpringProject.models.CartProduct)
-Error:      method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable) is not applicable
-Error:        (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProduct cannot be converted to java.io.Serializable)
-Error:      method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
-Error:        (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProduct cannot be converted to java.io.Serializable)
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartProductDaoTest.java:[58,57] cannot find symbol
-Error:    symbol:   method mock(java.lang.Class<org.hibernate.query.Query>)
-Error:    location: class com.jtspringproject.JtSpringProject.dao.cartProductDaoTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartProductDaoTest.java:[74,68] cannot find symbol
-Error:    symbol:   method mock(java.lang.Class<org.hibernate.query.NativeQuery>)
-Error:    location: class com.jtspringproject.JtSpringProject.dao.cartProductDaoTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartProductDaoTest.java:[85,68] cannot find symbol
-Error:    symbol:   method mock(java.lang.Class<org.hibernate.query.NativeQuery>)
-Error:    location: class com.jtspringproject.JtSpringProject.dao.cartProductDaoTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/CartProductTest.java:[33,20] incompatible types: possible lossy conversion from long to int
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/CartProductTest.java:[35,23] incompatible types: possible lossy conversion from long to int
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/CartProductTest.java:[51,46] incompatible types: long cannot be converted to java.lang.Integer
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/CartProductTest.java:[53,23] incompatible types: possible lossy conversion from long to int
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/CartProductTest.java:[55,26] incompatible types: possible lossy conversion from long to int
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/productDaoTest.java:[63,36] no suitable method found for thenReturn(com.jtspringproject.JtSpringProject.models.Product)
-Error:      method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable) is not applicable
-Error:        (argument mismatch; com.jtspringproject.JtSpringProject.models.Product cannot be converted to java.io.Serializable)
-Error:      method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
-Error:        (argument mismatch; com.jtspringproject.JtSpringProject.models.Product cannot be converted to java.io.Serializable)
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[65,34] 'void' type not allowed here
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[105,49] cannot find symbol
-Error:    symbol:   class NoResultException
-Error:    location: class com.jtspringproject.JtSpringProject.dao.userDaoTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/userDaoTest.java:[152,49] cannot find symbol
-Error:    symbol:   class NoResultException
-Error:    location: class com.jtspringproject.JtSpringProject.dao.userDaoTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[42,31] DRIVER has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[43,31] PASSWORD has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[44,31] URL has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[45,31] USERNAME has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[46,31] DIALECT has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[47,31] SHOW_SQL has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[48,31] HBM2DDL_AUTO has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[49,31] PACKAGES_TO_SCAN has private access in com.jtspringproject.JtSpringProject.HibernateConfiguration
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[60,77] cannot find symbol
-Error:    symbol:   method getDriverClassName()
-Error:    location: class org.springframework.jdbc.datasource.DriverManagerDataSource
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/HibernateConfigurationTest.java:[68,46] 'void' type not allowed here
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/cartServiceTest.java:[45,17] cannot find symbol
-Error:    symbol:   method setCustomer_id(int)
-Error:    location: variable testCart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/cartServiceTest.java:[46,17] cannot find symbol
-Error:    symbol:   method setProduct_id(int)
-Error:    location: variable testCart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/cartServiceTest.java:[47,17] cannot find symbol
-Error:    symbol:   method setQty(int)
-Error:    location: variable testCart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/cartServiceTest.java:[48,17] cannot find symbol
-Error:    symbol:   method setPrice(int)
-Error:    location: variable testCart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/models/ProductTest.java:[46,17] cannot find symbol
-Error:    symbol:   method setCategoryId(int)
-Error:    location: variable category of type com.jtspringproject.JtSpringProject.models.Category
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/controller/UserControllerTest.java:[57,9] cannot find symbol
-Error:    symbol:   variable MockitoAnnotations
-Error:    location: class com.jtspringproject.JtSpringProject.controller.UserControllerTest
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartDaoTest.java:[54,13] cannot find symbol
-Error:    symbol:   method setCart_id(int)
-Error:    location: variable cart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartDaoTest.java:[87,13] cannot find symbol
-Error:    symbol:   method setCart_id(int)
-Error:    location: variable cart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/dao/cartDaoTest.java:[97,13] cannot find symbol
-Error:    symbol:   method setCart_id(int)
-Error:    location: variable cart of type com.jtspringproject.JtSpringProject.models.Cart
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[47,30] incompatible types: possible lossy conversion from double to int
-Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/productServiceTest.java:[92,33] incompatible types: possible lossy conversion from double to int
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[61,28] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+Error:    required: no arguments
+Error:    found: int,java.lang.String
+Error:    reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[62,28] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+Error:    required: no arguments
+Error:    found: int,java.lang.String
+Error:    reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[83,33] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+Error:    required: no arguments
+Error:    found: int,java.lang.String
+Error:    reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/com/jtspringproject/JtSpringProject/services/categoryServiceTest.java:[94,33] constructor Category in class com.jtspringproject.JtSpringProject.models.Category cannot be applied to given types;
+Error:    required: no arguments
+Error:    found: int,java.lang.String
+Error:    reason: actual and formal argument lists differ in length
 Error:  -> [Help 1]
 Error:  
 Error:  To see the full stack trace of the errors, re-run Maven with the -e switch.
@@ -178,91 +127,41 @@ Error:  [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureExc
 ⚠️ Some tests failed, continuing with error-driven iteration
 ✅ Maven tests completed
 Run echo "🔄 Starting error-driven test improvement..."
-  
 🔄 Starting error-driven test improvement...
 🔄 Starting error-driven test improvement...
-Found 22 Java source files
+🎯 Error iteration focusing on 5 changed files only
+Found 5 Java source files
+
 🔄 Iteration 1/5
 🧪 Running Maven tests...
-❌ Tests failing with 117 error(s)
+❌ Tests failing with 29 error(s)
 🔍 Error details:
-  Error 1: [INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-[INFO] -------------------------------------------------------------
-Error:  COMPILATION ERROR : 
-[INFO] --...
+  Error 1: [INFO] Compiling 5 source files to /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/test-classes
+[INFO] --------------------------------------------------...
 Error:  2: [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
 Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/te...
-  Error 3:     method org.mockito.stubbing.OngoingStubbing.thenReturn(java.io.Serializable,java.io.Serializable...) is not applicable
-      (argument mismatch; com.jtspringproject.JtSpringProject.models.CartProd...
+  Error 3:   found: int,java.lang.String
+  reason: actual and formal argument lists differ in length
+Error:  /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/test/java/...
 📝 Processing JtSpringProjectApplication.java -> JtSpringProjectApplicationTest.java
 🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java based on errors...
 ❌ Failed to generate test for JtSpringProjectApplication.java
-📝 Processing HibernateConfiguration.java -> HibernateConfigurationTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/HibernateConfiguration.java based on errors...
-❌ Failed to generate test for HibernateConfiguration.java
-📝 Processing categoryService.java -> categoryServiceTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java based on errors...
-❌ Failed to generate test for categoryService.java
-📝 Processing userService.java -> userServiceTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java based on errors...
-❌ Failed to generate test for userService.java
-📝 Processing productService.java -> productServiceTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java based on errors...
-❌ Failed to generate test for productService.java
-📝 Processing cartService.java -> cartServiceTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/cartService.java based on errors...
-❌ Failed to generate test for cartService.java
-📝 Processing SecurityConfiguration.java -> SecurityConfigurationTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.java based on errors...
-❌ Failed to generate test for SecurityConfiguration.java
-📝 Processing CartProductRepository.java -> CartProductRepositoryTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/repository/CartProductRepository.java based on errors...
-❌ Failed to generate test for CartProductRepository.java
-📝 Processing categoryDao.java -> categoryDaoTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/categoryDao.java based on errors...
-❌ Failed to generate test for categoryDao.java
-📝 Processing productDao.java -> productDaoTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/productDao.java based on errors...
-❌ Failed to generate test for productDao.java
-📝 Processing cartProductDao.java -> cartProductDaoTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartProductDao.java based on errors...
-❌ Failed to generate test for cartProductDao.java
-📝 Processing cartDao.java -> cartDaoTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartDao.java based on errors...
-❌ Failed to generate test for cartDao.java
-📝 Processing userDao.java -> userDaoTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java based on errors...
-❌ Failed to generate test for userDao.java
-📝 Processing AdminController.java -> AdminControllerTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java based on errors...
-❌ Failed to generate test for AdminController.java
-📝 Processing ErrorController.java -> ErrorControllerTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/ErrorController.java based on errors...
-❌ Failed to generate test for ErrorController.java
-📝 Processing UserController.java -> UserControllerTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java based on errors...
-❌ Failed to generate test for UserController.java
-📝 Processing CartProductId.java -> CartProductIdTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProductId.java based on errors...
-❌ Failed to generate test for CartProductId.java
-📝 Processing User.java -> UserTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/User.java based on errors...
-❌ Failed to generate test for User.java
-📝 Processing Cart.java -> CartTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Cart.java based on errors...
-❌ Failed to generate test for Cart.java
 📝 Processing Category.java -> CategoryTest.java
 🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java based on errors...
 ❌ Failed to generate test for Category.java
-📝 Processing CartProduct.java -> CartProductTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/CartProduct.java based on errors...
-❌ Failed to generate test for CartProduct.java
-📝 Processing Product.java -> ProductTest.java
-🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Product.java based on errors...
-❌ Failed to generate test for Product.java
+📝 Processing categoryService.java -> categoryServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java based on errors...
+❌ Failed to generate test for categoryService.java
+📝 Processing productService.java -> productServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java based on errors...
+❌ Failed to generate test for productService.java
+📝 Processing userService.java -> userServiceTest.java
+🔧 Generating improved test for /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java based on errors...
+❌ Failed to generate test for userService.java
 ❌ No tests could be improved this iteration
 🧪 Running Maven tests...
+
 📊 Final Results:
   Tests passing: ❌
   Coverage: 0.0% (target: 80.0%)
