@@ -84,18 +84,23 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
         except Exception as e:
             print(f"Error reading {test_file}: {e}")
     
-    # Filter errors to only those relevant to this specific file
-    relevant_errors = []
-    file_name = java_file.name
-    test_file_name = test_file.name
-    
-    for error in error_messages:
-        if file_name in error or test_file_name in error:
-            relevant_errors.append(error)
-    
-    # If no relevant errors found, use all errors as fallback
-    if not relevant_errors:
-        relevant_errors = error_messages
+        # Filter errors to only those relevant to this specific file
+        relevant_errors = []
+        file_name = java_file.name
+        test_file_name = test_file.name
+
+        for error in error_messages:
+            # Check if error is related to this specific file
+            if (file_name in error or 
+                test_file_name in error or 
+                java_file.stem in error or
+                test_file.stem in error):
+                relevant_errors.append(error)
+
+        # If no relevant errors found, use all errors as fallback
+        if not relevant_errors:
+            print(f"⚠️ No specific errors found for {file_name}, using all errors as fallback")
+            relevant_errors = error_messages
     
     # Create an enhanced prompt with error feedback
     error_feedback = "\n".join(relevant_errors) if relevant_errors else "No specific errors captured"
@@ -113,36 +118,50 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
     print(f"🤖 First 500 chars of error feedback: {error_feedback[:500]}...")
     
     enhanced_prompt = f"""
-CRITICAL: The previous test generation failed with these specific errors:
-{error_feedback}
+           CRITICAL: The previous test generation failed with these specific errors:
+           {error_feedback}
 
-MOST IMPORTANT FIXES NEEDED:
-1. CONSTRUCTOR ERRORS: Use NO-ARGS constructor + setters for JPA entities
-   - WRONG: new Category(1, "name")
-   - CORRECT: new Category(); category.setId(1); category.setName("name")
-2. METHOD NAMES: Use EXACT camelCase method names from the actual class
-3. TYPE SAFETY: Use EXACT types (int, not long; String, not Object)
-   - WRONG: double value = 1.5; int id = value; (lossy conversion)
-   - CORRECT: int id = 1; or int id = (int) value; (explicit cast)
-4. IMPORTS: Include ALL necessary imports
-5. MOCKITO: Use proper mocking patterns for Spring Boot
-6. DATABASE MOCKING: For Spring Boot Application tests, use @MockBean to mock database connections
-7. NO REAL DATABASE: Never let tests connect to real databases - always mock database dependencies
+           ⚠️ COMPILATION VALIDATION REQUIRED:
+           Before generating any code, ensure it will compile by checking:
+           1. All statements end with semicolons (;)
+           2. All method calls use correct syntax
+           3. All variable declarations are complete
+           4. All imports are correct and available
+           5. All method names match exactly (case-sensitive)
 
-SPECIFIC DATABASE MOCKING REQUIREMENTS:
-- For JtSpringProjectApplication tests: DO NOT call SpringApplication.run() directly
-- Use @MockBean to mock all database-related beans (sessionFactory, userDao, etc.)
-- Use @ExtendWith(MockitoExtension.class) instead of @SpringBootTest
-- Mock all @Autowired dependencies with @Mock
-- Test only the main method logic, not the full Spring context
+           MOST IMPORTANT FIXES NEEDED:
+           1. CONSTRUCTOR ERRORS: Use NO-ARGS constructor + setters for JPA entities
+              - WRONG: new Category(1, "name")
+              - CORRECT: new Category(); category.setId(1); category.setName("name")
+           2. METHOD NAMES: Use EXACT camelCase method names from the actual class
+           3. TYPE SAFETY: Use EXACT types (int, not long; String, not Object)
+              - WRONG: double value = 1.5; int id = value; (lossy conversion)
+              - CORRECT: int id = 1; or int id = (int) value; (explicit cast)
+           4. IMPORTS: Include ALL necessary imports
+           5. MOCKITO: Use proper mocking patterns for Spring Boot
+           6. DATABASE MOCKING: For Spring Boot Application tests, use @MockBean to mock database connections
+           7. NO REAL DATABASE: Never let tests connect to real databases - always mock database dependencies
 
-Original Java code:
-{java_code}
+           SPECIFIC DATABASE MOCKING REQUIREMENTS:
+           - For JtSpringProjectApplication tests: DO NOT call SpringApplication.run() directly
+           - Use @MockBean to mock all database-related beans (sessionFactory, userDao, etc.)
+           - Use @ExtendWith(MockitoExtension.class) instead of @SpringBootTest
+           - Mock all @Autowired dependencies with @Mock
+           - Test only the main method logic, not the full Spring context
 
-Previous failing test (if any):
-{failing_test_code}
+           Original Java code:
+           {java_code}
 
-Generate a corrected test that will compile without ANY errors. Focus on fixing the constructor and method name issues first, and ensure database connections are properly mocked.
+           Previous failing test (if any):
+           {failing_test_code}
+
+           Generate a corrected test that will compile without ANY errors. Focus on fixing the constructor and method name issues first, and ensure database connections are properly mocked.
+           
+           ⚠️ FINAL CHECK: Before returning the code, verify it will compile by checking for:
+           - Missing semicolons
+           - Incorrect method calls
+           - Missing imports
+           - Syntax errors
 """
     
     # Write enhanced prompt to a temporary file
