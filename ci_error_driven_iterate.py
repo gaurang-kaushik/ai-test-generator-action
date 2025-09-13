@@ -191,12 +191,19 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
            - Start directly with package declaration
            - End with the closing brace of the class
            
-           ⚠️ FINAL CHECK: Before returning the code, verify it will compile by checking for:
+           ⚠️ FINAL COMPILATION VALIDATION: Before returning the code, verify it will compile by checking for:
            - Missing semicolons
            - Incorrect method calls
-           - Missing imports
+           - Missing imports (CategoryRepository, CategoryService, etc.)
+           - Type conversion errors (double to int, etc.)
            - Syntax errors
+           - Missing class references
+           - All imports must exist in the project
+           - All method calls must exist in the actual classes
+           - All types must match exactly (int not double, String not Object)
            - No markdown formatting
+           
+           🚨 CRITICAL: If you cannot verify the code will compile, DO NOT generate it. Ask for clarification instead.
 """
     
     # Write enhanced prompt to a temporary file
