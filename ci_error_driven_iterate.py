@@ -170,7 +170,7 @@ def read_line_coverage() -> float:
 
 
 def get_all_java_files() -> List[Path]:
-    """Get all Java source files - LIMITED TO CHANGED FILES ONLY"""
+    """Get only changed Java source files - NO FALLBACK to all files"""
     # Only process changed files, not entire repository
     base_sha = os.environ.get("BASE_SHA") or os.environ.get("GITHUB_BASE_SHA") or os.environ.get("GITHUB_EVENT_BEFORE", "")
     head_sha = os.environ.get("HEAD_SHA") or os.environ.get("GITHUB_SHA", "")
@@ -187,16 +187,15 @@ def get_all_java_files() -> List[Path]:
                     java_files.append(p)
             print(f"🎯 Error iteration focusing on {len(java_files)} changed files only")
             return java_files
-        except RuntimeError:
-            print("Warning: Could not get changed files, falling back to all files")
+        except RuntimeError as e:
+            print(f"❌ Git diff failed in error iteration: {e}")
+            print("🚫 CRITICAL: Cannot determine changed files - ABORTING to prevent processing all files")
+            return []
     
-    # Fallback to all files if git diff fails
-    source_dir = REPO_ROOT / SOURCE_PATH
-    if not source_dir.exists():
-        return []
-    java_files = list(source_dir.glob("**/*.java"))
-    print(f"⚠️ Processing all {len(java_files)} Java files (no git diff available)")
-    return java_files
+    # If no git SHAs available, return empty list instead of processing all files
+    print("❌ No git SHAs available - cannot determine changed files")
+    print("🚫 ABORTING to prevent processing all files")
+    return []
 
 
 def derive_test_path_from_source(java_source: Path) -> Path:

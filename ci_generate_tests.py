@@ -23,22 +23,31 @@ def run(cmd: List[str], cwd: Path = REPO_ROOT, check: bool = True) -> Tuple[int,
 
 
 def get_changed_java_files(base_sha: str, head_sha: str) -> List[Path]:
+    """Get only changed Java files - NO FALLBACK to all files"""
+    print(f"🔍 Attempting git diff: {base_sha}..{head_sha}")
+    
     # Try different git diff approaches to handle various scenarios
     try:
         # First try the standard range approach
         _code, out = run(["git", "diff", "--name-only", f"{base_sha}..{head_sha}"])
-    except RuntimeError:
+        print(f"✅ Git diff successful: {base_sha}..{head_sha}")
+    except RuntimeError as e:
+        print(f"❌ Git diff failed: {base_sha}..{head_sha} - {e}")
         try:
             # If range fails, try comparing with HEAD~1
             _code, out = run(["git", "diff", "--name-only", "HEAD~1", "HEAD"])
-        except RuntimeError:
+            print("✅ Git diff successful: HEAD~1..HEAD")
+        except RuntimeError as e:
+            print(f"❌ Git diff failed: HEAD~1..HEAD - {e}")
             try:
                 # If that fails, try comparing with the previous commit
                 _code, out = run(["git", "diff", "--name-only", "HEAD~1"])
-            except RuntimeError:
-                # Last resort: get all Java files in the source directory
-                print("Warning: Could not determine changed files, processing all Java files")
-                return list(APP_SRC.rglob("*.java"))
+                print("✅ Git diff successful: HEAD~1")
+            except RuntimeError as e:
+                print(f"❌ All git diff attempts failed - {e}")
+                print("🚫 CRITICAL: Cannot determine changed files - ABORTING to prevent processing all files")
+                print("💡 This prevents the AI from being overwhelmed with too much context")
+                return []
     
     files = [line.strip() for line in out.splitlines() if line.strip()]
     java_files = []
@@ -53,6 +62,8 @@ def get_changed_java_files(base_sha: str, head_sha: str) -> List[Path]:
         return []
     
     print(f"🎯 Found {len(java_files)} changed Java files - generating tests only for these")
+    for jf in java_files:
+        print(f"  - {jf.relative_to(REPO_ROOT)}")
     return java_files
 
 

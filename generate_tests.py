@@ -78,6 +78,17 @@ def build_user_prompt(java_code: str, context_file: str = None) -> str:
         f"{java_code}\n"
         f"{context_section}"
         "END.\n\n"
+        "CRITICAL REQUIREMENTS - READ CAREFULLY:\n"
+        "1. CONSTRUCTOR USAGE: Use NO-ARGS constructor + setters for JPA entities. Do NOT use parameterized constructors unless explicitly shown in the ENHANCED CONTEXT.\n"
+        "2. METHOD NAMES: Use EXACT method names from the ENHANCED CONTEXT - follow camelCase convention (e.g., setCartId, not setCart_id).\n"
+        "3. TYPE SAFETY: Use EXACT types from the ENHANCED CONTEXT - no type conversions (e.g., use int, not long).\n"
+        "4. IMPORTS: Include ALL necessary imports - check the IMPORTS section in ENHANCED CONTEXT.\n"
+        "5. MOCKITO: For Mockito.thenReturn(), ensure return types are Serializable or use proper mocking patterns.\n"
+        "6. SPRING BOOT: Use @ExtendWith(MockitoExtension.class) for unit tests, NOT @SpringBootTest.\n"
+        "7. JPA ENTITIES: For @Entity classes, use no-args constructor + setters pattern.\n"
+        "8. MOCKING: Mock all @Autowired, @Repository, @Service dependencies with @Mock.\n"
+        "9. COMPILATION: The generated test MUST compile without errors.\n"
+        "10. PACKAGE: Use the same package as the source class.\n\n"
         "Important final reminders for the generator:\n"
         "- Do NOT change business logic. If you think business logic is wrong, add a one-line `// NOTE:` at the top explaining the concern, then still generate tests assuming current behavior.\n"
         "- Mock repositories or external API calls — create @Mock fields and necessary stubs.\n"
@@ -93,6 +104,7 @@ def build_user_prompt(java_code: str, context_file: str = None) -> str:
         "- Ensure the produced Java file compiles (imports, package, class name, annotations).\n"
         "- Output ONLY the Java test file content with no Markdown fences or backticks.\n"
         "- Use the ENHANCED CONTEXT above to understand the exact class structure, constructors, and dependencies.\n"
+        "- DOUBLE-CHECK: Verify all method calls, constructor usage, and imports match the ENHANCED CONTEXT exactly.\n"
     )
 
 

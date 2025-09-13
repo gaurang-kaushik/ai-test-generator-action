@@ -164,6 +164,12 @@ class JavaContextAnalyzer:
         """Generate comprehensive context for AI test generation"""
         context = self.analyze_java_file(java_file)
         
+        # Read the actual file content to get more accurate information
+        try:
+            file_content = java_file.read_text(encoding='utf-8')
+        except Exception as e:
+            file_content = f"Error reading file: {e}"
+        
         context_text = f"""
 COMPREHENSIVE JAVA CONTEXT FOR TEST GENERATION
 ==============================================
@@ -171,6 +177,9 @@ COMPREHENSIVE JAVA CONTEXT FOR TEST GENERATION
 TARGET FILE: {java_file.name}
 PACKAGE: {context.get('package', 'N/A')}
 CLASS NAME: {context.get('class_name', 'N/A')}
+
+ACTUAL FILE CONTENT:
+{file_content}
 
 INHERITANCE:
 - Extends: {context.get('extends', 'None')}
@@ -180,7 +189,7 @@ ANNOTATIONS:
 - Class Annotations: {', '.join(context.get('annotations', []))}
 - Spring Annotations: {', '.join(context.get('spring_annotations', []))}
 
-CONSTRUCTORS:
+CONSTRUCTORS (EXACT SIGNATURES):
 """
         
         for constructor in context.get('constructors', []):
@@ -188,13 +197,13 @@ CONSTRUCTORS:
             context_text += f"- {constructor['name']}({params})\n"
         
         context_text += f"""
-FIELDS:
+FIELDS (EXACT TYPES AND NAMES):
 """
         for field in context.get('fields', []):
             context_text += f"- {field['type']} {field['name']}\n"
         
         context_text += f"""
-METHODS:
+METHODS (EXACT SIGNATURES):
 """
         for method in context.get('methods', []):
             params = ', '.join([f"{p['type']} {p['name']}" for p in method['parameters']])
@@ -219,14 +228,26 @@ MODEL CLASSES (for test data creation):
             context_text += f"- {model}\n"
         
         context_text += f"""
-TEST GENERATION GUIDELINES:
-1. Use correct constructor calls based on the constructors listed above
-2. Mock all dependencies listed in the DEPENDENCIES section
-3. Use appropriate Spring annotations (@Service, @Repository, etc.)
-4. Import all necessary classes from the IMPORTS section
-5. Create test data using the MODEL CLASSES listed above
-6. Follow JUnit5 + Mockito patterns
-7. Ensure all method calls match the exact signatures listed above
+CRITICAL TEST GENERATION RULES:
+1. Use the EXACT constructor signatures shown above - NO parameterized constructors unless explicitly shown
+2. Use the EXACT method names shown above - follow camelCase convention
+3. Use the EXACT field types shown above - no type conversions
+4. Mock all dependencies listed in the DEPENDENCIES section
+5. Use appropriate Spring annotations (@Service, @Repository, etc.)
+6. Import all necessary classes from the IMPORTS section
+7. Create test data using the MODEL CLASSES listed above
+8. Follow JUnit5 + Mockito patterns
+9. Ensure all method calls match the exact signatures listed above
+10. For JPA entities, use no-args constructor + setters pattern
+11. For Mockito, ensure return types are Serializable or use proper mocking
+12. Use correct import statements - check the IMPORTS section above
+
+SPRING BOOT SPECIFIC NOTES:
+- This is a Spring Boot application with JPA/Hibernate
+- Use @Entity, @Id, @Column annotations as shown in the actual file content
+- Mock repositories with @MockBean or @Mock
+- Use @ExtendWith(MockitoExtension.class) for unit tests
+- Do NOT use @SpringBootTest for unit tests - use @ExtendWith(MockitoExtension.class)
 """
         
         return context_text
