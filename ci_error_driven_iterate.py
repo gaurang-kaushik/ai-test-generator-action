@@ -176,24 +176,8 @@ def get_all_java_files() -> List[Path]:
     head_sha = os.environ.get("HEAD_SHA") or os.environ.get("GITHUB_SHA", "")
     
     if base_sha and head_sha:
-        # Validate SHAs first
-        def is_valid_sha(sha: str) -> bool:
-            try:
-                _code, _out = run(["git", "rev-parse", "--verify", sha], check=False)
-                return _code == 0
-            except:
-                return False
-        
         # Use git diff to get only changed files
         try:
-            # First validate both SHAs
-            if not is_valid_sha(base_sha):
-                print(f"⚠️ BASE_SHA {base_sha} is invalid, trying HEAD~1")
-                base_sha = "HEAD~1"
-            if not is_valid_sha(head_sha):
-                print(f"⚠️ HEAD_SHA {head_sha} is invalid, trying HEAD")
-                head_sha = "HEAD"
-            
             _code, out = run(["git", "diff", "--name-only", f"{base_sha}..{head_sha}"])
             files = [line.strip() for line in out.splitlines() if line.strip()]
             java_files = []
@@ -206,7 +190,7 @@ def get_all_java_files() -> List[Path]:
         except RuntimeError as e:
             print(f"❌ Git diff failed: {base_sha}..{head_sha} - {e}")
             try:
-                # Try HEAD~1..HEAD as fallback
+                # Try HEAD~1..HEAD as fallback (should work with fetch-depth: 0)
                 _code, out = run(["git", "diff", "--name-only", "HEAD~1", "HEAD"])
                 files = [line.strip() for line in out.splitlines() if line.strip()]
                 java_files = []
@@ -217,22 +201,9 @@ def get_all_java_files() -> List[Path]:
                 print(f"🎯 Error iteration focusing on {len(java_files)} changed files only (fallback)")
                 return java_files
             except RuntimeError as e2:
-                print(f"❌ Git diff failed: HEAD~1..HEAD - {e2}")
-                try:
-                    # Try HEAD^..HEAD as another fallback
-                    _code, out = run(["git", "diff", "--name-only", "HEAD^", "HEAD"])
-                    files = [line.strip() for line in out.splitlines() if line.strip()]
-                    java_files = []
-                    for f in files:
-                        p = (REPO_ROOT / f).resolve()
-                        if p.suffix == ".java" and str(p).startswith(str(REPO_ROOT / SOURCE_PATH)):
-                            java_files.append(p)
-                    print(f"🎯 Error iteration focusing on {len(java_files)} changed files only (HEAD^ fallback)")
-                    return java_files
-                except RuntimeError as e3:
-                    print(f"❌ All git diff attempts failed in error iteration: {e3}")
-                    print("🚫 CRITICAL: Cannot determine changed files - ABORTING to prevent processing all files")
-                    return []
+                print(f"❌ All git diff attempts failed in error iteration: {e2}")
+                print("🚫 CRITICAL: Cannot determine changed files - ABORTING to prevent processing all files")
+                return []
     
     # If no git SHAs available, return empty list instead of processing all files
     print("❌ No git SHAs available - cannot determine changed files")
