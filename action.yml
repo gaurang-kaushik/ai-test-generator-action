@@ -136,9 +136,11 @@ runs:
             
             # Push the changes
             echo "🚀 Pushing all test files to repository..."
-            CURRENT_BRANCH=$(git branch --show-current)
-            echo "📋 Current branch: $CURRENT_BRANCH"
-            git push origin $CURRENT_BRANCH
+            # Use the branch name from GitHub context instead of git branch --show-current
+            # which fails in detached HEAD state
+            BRANCH_NAME="${{ github.ref_name }}"
+            echo "📋 Branch name: $BRANCH_NAME"
+            git push origin HEAD:$BRANCH_NAME
             echo "✅ All test files committed and pushed successfully!"
           else
             echo "ℹ️ No changes to commit"
@@ -165,9 +167,11 @@ runs:
             
             # Push the changes
             echo "🚀 Pushing working test files to repository..."
-            CURRENT_BRANCH=$(git branch --show-current)
-            echo "📋 Current branch: $CURRENT_BRANCH"
-            git push origin $CURRENT_BRANCH
+            # Use the branch name from GitHub context instead of git branch --show-current
+            # which fails in detached HEAD state
+            BRANCH_NAME="${{ github.ref_name }}"
+            echo "📋 Branch name: $BRANCH_NAME"
+            git push origin HEAD:$BRANCH_NAME
             echo "✅ Working test files committed and pushed successfully!"
           else
             echo "ℹ️ No changes to commit"
