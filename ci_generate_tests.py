@@ -60,10 +60,22 @@ def get_changed_java_files(base_sha: str, head_sha: str) -> List[Path]:
                 _code, out = run(["git", "diff", "--name-only", "HEAD~1"])
                 print("✅ Git diff successful: HEAD~1")
             except RuntimeError as e:
-                print(f"❌ All git diff attempts failed - {e}")
-                print("🚫 CRITICAL: Cannot determine changed files - ABORTING to prevent processing all files")
-                print("💡 This prevents the AI from being overwhelmed with too much context")
-                return []
+                print(f"❌ Git diff failed: HEAD~1 - {e}")
+                try:
+                    # Last resort: try to get the last commit and compare with current
+                    _code, last_commit = run(["git", "rev-parse", "HEAD~1"], check=False)
+                    if _code == 0:
+                        _code, out = run(["git", "diff", "--name-only", last_commit.strip(), "HEAD"])
+                        print(f"✅ Git diff successful: {last_commit.strip()}..HEAD")
+                    else:
+                        # If we can't get HEAD~1, try to get the last commit differently
+                        _code, out = run(["git", "diff", "--name-only", "HEAD^", "HEAD"])
+                        print("✅ Git diff successful: HEAD^..HEAD")
+                except RuntimeError as e:
+                    print(f"❌ All git diff attempts failed - {e}")
+                    print("🚫 CRITICAL: Cannot determine changed files - ABORTING to prevent processing all files")
+                    print("💡 This prevents the AI from being overwhelmed with too much context")
+                    return []
     
     # If we get here, we have output from git diff
     files = [line.strip() for line in out.splitlines() if line.strip()]
