@@ -37,16 +37,29 @@ def run_maven_tests() -> Tuple[bool, str, List[str]]:
         # Look for specific compilation error patterns
         lines = output.split('\n')
         for i, line in enumerate(lines):
-            if 'COMPILATION ERROR' in line or 'incompatible types' in line or 'constructor' in line or 'method' in line:
-                # Capture the specific error line and context
+            # Check for Maven compilation errors (format: "Error:  COMPILATION ERROR :")
+            if 'Error:' in line and 'COMPILATION ERROR' in line:
+                # Capture the error section (usually spans multiple lines)
                 start = max(0, i-1)
-                end = min(len(lines), i+2)
+                end = min(len(lines), i+5)  # Capture more context
                 error_context = '\n'.join(lines[start:end])
                 error_messages.append(error_context)
-            elif 'ERROR' in line and ('test' in line.lower() or 'java' in line.lower()):
+            # Check for specific Java compilation errors
+            elif any(pattern in line for pattern in [
+                'cannot find symbol', 'incompatible types', 'constructor', 
+                'method', 'class', 'interface', 'enum', 'package',
+                'illegal character', 'reached end of file', 'expected'
+            ]):
+                # Capture the specific error line and context
+                start = max(0, i-1)
+                end = min(len(lines), i+3)
+                error_context = '\n'.join(lines[start:end])
+                error_messages.append(error_context)
+            # Check for Maven build failures
+            elif 'ERROR' in line and ('test' in line.lower() or 'java' in line.lower() or 'maven' in line.lower()):
                 # Capture test-related errors
                 start = max(0, i-1)
-                end = min(len(lines), i+2)
+                end = min(len(lines), i+3)
                 error_context = '\n'.join(lines[start:end])
                 error_messages.append(error_context)
     
@@ -88,13 +101,18 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
         relevant_errors = []
         file_name = java_file.name
         test_file_name = test_file.name
+        java_stem = java_file.stem
+        test_stem = test_file.stem
 
         for error in error_messages:
             # Check if error is related to this specific file
             if (file_name in error or 
                 test_file_name in error or 
-                java_file.stem in error or
-                test_file.stem in error):
+                java_stem in error or
+                test_stem in error or
+                # Also check for class names in the error
+                java_stem.replace('Service', '') in error or
+                test_stem.replace('Test', '') in error):
                 relevant_errors.append(error)
 
         # If no relevant errors found, use all errors as fallback
@@ -113,9 +131,26 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
         print(f"⚠️ No relevant errors found for {file_name}, using all errors as fallback")
         error_feedback = "\n".join(error_messages)
     
+    # If still no errors, try to extract from Maven output directly
+    if not error_feedback or error_feedback == "No specific errors captured":
+        print(f"⚠️ Still no errors found, extracting from raw Maven output...")
+        # Look for any error patterns in the raw output
+        lines = output.split('\n')
+        error_lines = []
+        for line in lines:
+            if any(pattern in line for pattern in ['Error:', 'ERROR', 'error', 'failed', 'Failed']):
+                error_lines.append(line)
+        if error_lines:
+            error_feedback = "\n".join(error_lines[-10:])  # Last 10 error lines
+            print(f"🔍 Extracted {len(error_lines)} error lines from raw output")
+    
     # Debug: Show what the AI will receive
     print(f"🤖 AI will receive error feedback of length: {len(error_feedback)} characters")
-    print(f"🤖 First 500 chars of error feedback: {error_feedback[:500]}...")
+    if len(error_feedback) > 1000:
+        print(f"🤖 First 1000 chars of error feedback: {error_feedback[:1000]}...")
+        print(f"🤖 Last 500 chars of error feedback: ...{error_feedback[-500:]}")
+    else:
+        print(f"🤖 Full error feedback: {error_feedback}")
     
     enhanced_prompt = f"""
            CRITICAL: The previous test generation failed with these specific errors:
