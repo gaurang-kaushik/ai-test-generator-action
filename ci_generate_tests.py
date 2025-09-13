@@ -46,6 +46,13 @@ def get_changed_java_files(base_sha: str, head_sha: str) -> List[Path]:
         p = (REPO_ROOT / f).resolve()
         if p.suffix == ".java" and str(p).startswith(str(APP_SRC)):
             java_files.append(p)
+    
+    # LIMIT TO ONLY CHANGED FILES - Don't process entire repository
+    if not java_files:
+        print("No changed Java files found. Skipping test generation.")
+        return []
+    
+    print(f"🎯 Found {len(java_files)} changed Java files - generating tests only for these")
     return java_files
 
 

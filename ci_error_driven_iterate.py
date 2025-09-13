@@ -170,11 +170,33 @@ def read_line_coverage() -> float:
 
 
 def get_all_java_files() -> List[Path]:
-    """Get all Java source files"""
+    """Get all Java source files - LIMITED TO CHANGED FILES ONLY"""
+    # Only process changed files, not entire repository
+    base_sha = os.environ.get("BASE_SHA") or os.environ.get("GITHUB_BASE_SHA") or os.environ.get("GITHUB_EVENT_BEFORE", "")
+    head_sha = os.environ.get("HEAD_SHA") or os.environ.get("GITHUB_SHA", "")
+    
+    if base_sha and head_sha:
+        # Use git diff to get only changed files
+        try:
+            _code, out = run(["git", "diff", "--name-only", f"{base_sha}..{head_sha}"])
+            files = [line.strip() for line in out.splitlines() if line.strip()]
+            java_files = []
+            for f in files:
+                p = (REPO_ROOT / f).resolve()
+                if p.suffix == ".java" and str(p).startswith(str(REPO_ROOT / SOURCE_PATH)):
+                    java_files.append(p)
+            print(f"🎯 Error iteration focusing on {len(java_files)} changed files only")
+            return java_files
+        except RuntimeError:
+            print("Warning: Could not get changed files, falling back to all files")
+    
+    # Fallback to all files if git diff fails
     source_dir = REPO_ROOT / SOURCE_PATH
     if not source_dir.exists():
         return []
-    return list(source_dir.glob("**/*.java"))
+    java_files = list(source_dir.glob("**/*.java"))
+    print(f"⚠️ Processing all {len(java_files)} Java files (no git diff available)")
+    return java_files
 
 
 def derive_test_path_from_source(java_source: Path) -> Path:
