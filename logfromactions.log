@@ -1,13 +1,16 @@
+                            
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar (78 kB at 7.8 MB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar (7.1 kB at 1.4 MB/s)
 [INFO] 
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.jtspringproject.JtSpringProject.services.categoryServiceTest
-[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.702 s - in com.jtspringproject.JtSpringProject.services.categoryServiceTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.767 s - in com.jtspringproject.JtSpringProject.services.categoryServiceTest
 [INFO] Running com.jtspringproject.JtSpringProject.services.productServiceTest
-[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 s - in com.jtspringproject.JtSpringProject.services.productServiceTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 s - in com.jtspringproject.JtSpringProject.services.productServiceTest
 [INFO] Running com.jtspringproject.JtSpringProject.services.userServiceTest
-[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.1 s - in com.jtspringproject.JtSpringProject.services.userServiceTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.123 s - in com.jtspringproject.JtSpringProject.services.userServiceTest
 [INFO] Running com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -16,19 +19,19 @@
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.6.4)
-2025-09-13 14:49:25.879  INFO 2281 --- [           main] c.j.J.JtSpringProjectApplication         : Starting JtSpringProjectApplication using Java 11.0.28 on runnervmf4ws1 with PID 2281 (started by runner in /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject)
-2025-09-13 14:49:25.883  INFO 2281 --- [           main] c.j.J.JtSpringProjectApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-09-13 14:49:26.950  INFO 2281 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-09-13 14:49:27.030  INFO 2281 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 1 JPA repository interfaces.
-2025-09-13 14:49:28.026  INFO 2281 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-09-13 14:49:28.081  INFO 2281 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-09-13 14:49:28.082  INFO 2281 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2025-09-13 14:49:28.959  INFO 2281 --- [           main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-09-13 14:49:28.967  INFO 2281 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-09-13 14:49:28.967  INFO 2281 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3001 ms
-2025-09-13 14:49:29.256  INFO 2281 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
-2025-09-13 14:49:29.789  INFO 2281 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-09-13 14:49:30.172  WARN 2281 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2025-09-13 15:01:11.003  INFO 2282 --- [           main] c.j.J.JtSpringProjectApplication         : Starting JtSpringProjectApplication using Java 11.0.28 on runnervmf4ws1 with PID 2282 (started by runner in /home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject)
+2025-09-13 15:01:11.028  INFO 2282 --- [           main] c.j.J.JtSpringProjectApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-13 15:01:12.192  INFO 2282 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-13 15:01:12.273  INFO 2282 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 1 JPA repository interfaces.
+2025-09-13 15:01:13.240  INFO 2282 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-09-13 15:01:13.266  INFO 2282 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-13 15:01:13.267  INFO 2282 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2025-09-13 15:01:13.983  INFO 2282 --- [           main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-09-13 15:01:13.991  INFO 2282 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-13 15:01:13.992  INFO 2282 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2816 ms
+2025-09-13 15:01:14.296  INFO 2282 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2025-09-13 15:01:14.773  INFO 2282 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-09-13 15:01:15.163  WARN 2282 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175) ~[mysql-connector-j-8.0.33.jar:8.0.33]
@@ -124,7 +127,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
 	at com.jtspringproject.JtSpringProject.JtSpringProjectApplication.main(JtSpringProjectApplication.java:11) ~[classes/:na]
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:22) ~[test-classes/:na]
+	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32) ~[test-classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -215,15 +218,15 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.0.33.jar:8.0.33]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-j-8.0.33.jar:8.0.33]
 	... 159 common frames omitted
-2025-09-13 14:49:30.194  INFO 2281 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2025-09-13 14:49:30.844  WARN 2281 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
-2025-09-13 14:49:30.844 ERROR 2281 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
+2025-09-13 15:01:15.188  INFO 2282 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2025-09-13 15:01:15.855  WARN 2282 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2025-09-13 15:01:15.855 ERROR 2282 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2025-09-13 14:49:30.848  WARN 2281 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration' defined in file [/home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/classes/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException
-2025-09-13 14:49:30.850  INFO 2281 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-09-13 14:49:30.884  INFO 2281 --- [           main] ConditionEvaluationReportLoggingListener : 
+2025-09-13 15:01:15.860  WARN 2282 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration' defined in file [/home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/classes/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException
+2025-09-13 15:01:15.862  INFO 2282 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-13 15:01:15.879  INFO 2282 --- [           main] ConditionEvaluationReportLoggingListener : 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2025-09-13 14:49:30.907 ERROR 2281 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2025-09-13 15:01:15.905 ERROR 2282 --- [           main] o.s.boot.SpringApplication               : Application run failed
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration' defined in file [/home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/classes/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; 
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.16.jar:5.3.16]
@@ -245,7 +248,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
 	at com.jtspringproject.JtSpringProject.JtSpringProjectApplication.main(JtSpringProjectApplication.java:11) ~[classes/:na]
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:22) ~[test-classes/:na]
+	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32) ~[test-classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -427,43 +430,43 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.0.33.jar:8.0.33]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-j-8.0.33.jar:8.0.33]
 	... 157 common frames omitted
-Error:  Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.986 s <<< FAILURE! - in com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
-Error:  mainMethodCallsSpringApplicationRun  Time elapsed: 5.982 s  <<< ERROR!
+Error:  Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.112 s <<< FAILURE! - in com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest
+Error:  mainMethodCallsSpringApplicationRun  Time elapsed: 6.107 s  <<< ERROR!
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration' defined in file [/home/runner/work/E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject/target/classes/com/jtspringproject/JtSpringProject/configuration/SecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; 
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:22)
+	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:22)
+	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:22)
+	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [com/jtspringproject/JtSpringProject/HibernateConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:22)
+	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
 Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:22)
+	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
 Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
 Communications link failure
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:22)
+	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
 Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
 Communications link failure
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:22)
+	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
 Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:22)
+	at com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun(JtSpringProjectApplicationTest.java:32)
 [INFO] Running com.jtspringproject.JtSpringProject.models.CategoryTest
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.jtspringproject.JtSpringProject.models.CategoryTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.jtspringproject.JtSpringProject.models.CategoryTest
 [INFO] 
 [INFO] Results:
 [INFO] 
 Error:  Errors: 
-Error:    JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun:22 » UnsatisfiedDependency
+Error:    JtSpringProjectApplicationTest.mainMethodCallsSpringApplicationRun:32 » UnsatisfiedDependency
 [INFO] 
-Error:  Tests run: 36, Failures: 0, Errors: 1, Skipped: 0
+Error:  Tests run: 34, Failures: 0, Errors: 1, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.954 s
-[INFO] Finished at: 2025-09-13T14:49:31Z
+[INFO] Total time:  19.863 s
+[INFO] Finished at: 2025-09-13T15:01:16Z
 [INFO] ------------------------------------------------------------------------
 Error:  Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project JtSpringProject: There are test failures.
 Error:  
@@ -487,7 +490,7 @@ Found 5 Java source files
 🧪 Running Maven tests...
 ❌ Tests failing with 54 error(s)
 🔍 Error details:
-  Error 1: 2025-09-13 14:49:40.990  WARN 2424 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+  Error 1: 2025-09-13 15:01:26.328  WARN 2423 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 com.mysql.cj.jdbc.exceptions.Communication...
   Error 2: 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -515,4 +518,3 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
   Tests passing: ❌
   Coverage: 0.0% (target: 80.0%)
 ❌ Some tests still failing after error-driven iteration
-Error: Process completed with exit code 1.

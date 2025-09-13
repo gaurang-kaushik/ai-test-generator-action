@@ -96,6 +96,13 @@ MOST IMPORTANT FIXES NEEDED:
 6. DATABASE MOCKING: For Spring Boot Application tests, use @MockBean to mock database connections
 7. NO REAL DATABASE: Never let tests connect to real databases - always mock database dependencies
 
+SPECIFIC DATABASE MOCKING REQUIREMENTS:
+- For JtSpringProjectApplication tests: DO NOT call SpringApplication.run() directly
+- Use @MockBean to mock all database-related beans (sessionFactory, userDao, etc.)
+- Use @ExtendWith(MockitoExtension.class) instead of @SpringBootTest
+- Mock all @Autowired dependencies with @Mock
+- Test only the main method logic, not the full Spring context
+
 Original Java code:
 {java_code}
 
