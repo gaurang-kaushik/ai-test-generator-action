@@ -287,5 +287,34 @@ def main(argv: list[str]) -> int:
     return 0
 
 
+def generate_test_with_prompt(java_file: Path, test_file: Path, enhanced_prompt: str) -> bool:
+    """Generate test using an enhanced prompt for error-driven iteration"""
+    try:
+        # Read the Java source
+        with open(java_file, 'r') as f:
+            java_code = f.read()
+        
+        # Generate context
+        from enhanced_context_generator import JavaContextAnalyzer
+        analyzer = JavaContextAnalyzer(java_file)
+        context = analyzer.generate_comprehensive_context()
+        
+        # Use the enhanced prompt instead of the regular one
+        user_prompt = enhanced_prompt
+        
+        # Generate the test
+        test_content = generate_test_content(java_code, context, user_prompt, "gemini-2.0-flash-exp", os.environ.get("GOOGLE_API_KEY", ""))
+        
+        # Write the test file
+        test_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(test_file, 'w') as f:
+            f.write(test_content)
+        
+        return True
+    except Exception as e:
+        print(f"Error generating test with enhanced prompt: {e}")
+        return False
+
+
 if __name__ == "__main__":
     sys.exit(main(sys.argv[1:])) 

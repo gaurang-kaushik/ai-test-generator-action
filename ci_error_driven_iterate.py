@@ -151,22 +151,25 @@ Generate a corrected test that will compile without ANY errors. Focus on fixing 
         f.write(enhanced_prompt)
     
     try:
-        # Generate improved test
-        code, out = run([
-            sys.executable,
-            str(GEN_SCRIPT),
-            "--guide", str(GUIDE_PATH),
-            "--model", os.environ.get("MODEL", "gemini-2.0-flash-exp"),
-            "--java", str(java_file),
-            "--out", str(test_file),
-        ], check=False)
+        # Generate improved test using the enhanced prompt directly
+        print(f"🤖 Calling generate_tests.py with enhanced prompt...")
+        print(f"🤖 Enhanced prompt length: {len(enhanced_prompt)} characters")
+        
+        # Call the test generation function directly with the enhanced prompt
+        from generate_tests import generate_test_with_prompt
+        
+        success = generate_test_with_prompt(java_file, test_file, enhanced_prompt)
+        
+        print(f"🤖 Generate test success: {success}")
         
         # Clean up temp file
         temp_prompt_file.unlink(missing_ok=True)
         
-        return code == 0
+        return success
     except Exception as e:
         print(f"Error generating improved test: {e}")
+        import traceback
+        print(f"Full traceback: {traceback.format_exc()}")
         temp_prompt_file.unlink(missing_ok=True)
         return False
 
