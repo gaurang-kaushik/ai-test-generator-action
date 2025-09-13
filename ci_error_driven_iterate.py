@@ -101,7 +101,16 @@ def generate_improved_test(java_file: Path, test_file: Path, error_messages: Lis
     error_feedback = "\n".join(relevant_errors) if relevant_errors else "No specific errors captured"
     print(f"🔍 Captured {len(error_messages)} total errors, {len(relevant_errors)} relevant to {file_name}:")
     for i, msg in enumerate(relevant_errors):
-        print(f"  Relevant Error {i+1}: {msg[:100]}...")
+        print(f"  Relevant Error {i+1}: {msg[:200]}...")
+    
+    # Ensure we have the full error context for the AI
+    if not error_feedback or error_feedback == "No specific errors captured":
+        print(f"⚠️ No relevant errors found for {file_name}, using all errors as fallback")
+        error_feedback = "\n".join(error_messages)
+    
+    # Debug: Show what the AI will receive
+    print(f"🤖 AI will receive error feedback of length: {len(error_feedback)} characters")
+    print(f"🤖 First 500 chars of error feedback: {error_feedback[:500]}...")
     
     enhanced_prompt = f"""
 CRITICAL: The previous test generation failed with these specific errors:
